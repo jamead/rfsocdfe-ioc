@@ -1,0 +1,2987 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2025-08-12 17:03:37 by mead-->
+<display version="2.0.0">
+  <name>$(PriSys):$(PSC)</name>
+  <width>860</width>
+  <height>1000</height>
+  <background_color>
+    <color red="200" green="215" blue="255">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <grid_step_x>6</grid_step_x>
+  <grid_step_y>6</grid_step_y>
+  <widget type="label" version="2.0.0">
+    <name>Text Input</name>
+    <macros>
+      <pv_name></pv_name>
+    </macros>
+    <text>${P}</text>
+    <x>394</x>
+    <y>19</y>
+    <width>77</width>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="OpTitleBG" red="175" green="238" blue="175">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Text Input_2</name>
+    <macros>
+      <pv_name></pv_name>
+    </macros>
+    <text>${N}</text>
+    <x>475</x>
+    <y>19</y>
+    <width>77</width>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="OpTitleBG" red="175" green="238" blue="175">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_45</name>
+    <text>Location</text>
+    <x>398</x>
+    <y>3</y>
+    <width>78</width>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_46</name>
+    <text>Number</text>
+    <x>473</x>
+    <y>3</y>
+    <width>78</width>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_47</name>
+    <text>EIC Common Platform Carrier</text>
+    <x>24</x>
+    <y>5</y>
+    <width>354</width>
+    <height>37</height>
+    <font>
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_116</name>
+    <x>1032</x>
+    <y>707</y>
+    <width>1</width>
+    <height>1</height>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Temperatures</name>
+    <x>336</x>
+    <y>479</y>
+    <width>310</width>
+    <height>263</height>
+    <style>1</style>
+    <foreground_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="65" green="105" blue="225">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_234</name>
+      <pv_name>$(P){CPC:$(N)}Sys-BrdTemp2-I</pv_name>
+      <x>154</x>
+      <y>101</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <precision>2</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_235</name>
+      <pv_name>$(P){CPC:$(N)}Sys-BrdTemp3-I</pv_name>
+      <x>154</x>
+      <y>122</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <precision>2</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_144</name>
+      <text>Board 3</text>
+      <x>47</x>
+      <y>101</y>
+      <width>96</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_145</name>
+      <text>Board 4</text>
+      <x>47</x>
+      <y>122</y>
+      <width>96</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_8</name>
+      <pv_name>$(P){CPC:$(N)}Sys-RegTemp3-I</pv_name>
+      <x>155</x>
+      <y>211</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <precision>2</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_101</name>
+      <text>Regulator 4</text>
+      <x>47</x>
+      <y>211</y>
+      <width>96</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_139</name>
+      <text>Regulator 1</text>
+      <x>47</x>
+      <y>148</y>
+      <width>96</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_140</name>
+      <text>Regulator 2</text>
+      <x>47</x>
+      <y>169</y>
+      <width>96</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_141</name>
+      <text>Regulator 3</text>
+      <x>47</x>
+      <y>190</y>
+      <width>96</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_236</name>
+      <pv_name>$(P){CPC:$(N)}Sys-RegTemp0-I</pv_name>
+      <x>155</x>
+      <y>148</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <precision>2</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_237</name>
+      <pv_name>$(P){CPC:$(N)}Sys-RegTemp1-I</pv_name>
+      <x>155</x>
+      <y>169</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <precision>2</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_238</name>
+      <pv_name>$(P){CPC:$(N)}Sys-RegTemp2-I</pv_name>
+      <x>155</x>
+      <y>190</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <precision>2</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_99</name>
+      <text>FPGA PS </text>
+      <x>50</x>
+      <y>33</y>
+      <width>96</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_229</name>
+      <pv_name>$(P){CPC:$(N)}Sys-fpgaplTemp-I</pv_name>
+      <x>155</x>
+      <y>12</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <precision>2</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_138</name>
+      <text>FPGA PL</text>
+      <x>49</x>
+      <y>12</y>
+      <width>96</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_231</name>
+      <pv_name>$(P){CPC:$(N)}Sys-fpgapsTemp-I</pv_name>
+      <x>155</x>
+      <y>33</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <precision>2</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_100</name>
+      <text>Board 1</text>
+      <x>48</x>
+      <y>59</y>
+      <width>96</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_232</name>
+      <pv_name>$(P){CPC:$(N)}Sys-BrdTemp0-I</pv_name>
+      <x>155</x>
+      <y>59</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <precision>2</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_233</name>
+      <pv_name>$(P){CPC:$(N)}Sys-BrdTemp1-I</pv_name>
+      <x>155</x>
+      <y>80</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <precision>2</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_143</name>
+      <text>Board 2</text>
+      <x>48</x>
+      <y>80</y>
+      <width>96</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Power</name>
+    <x>24</x>
+    <y>479</y>
+    <width>310</width>
+    <height>451</height>
+    <style>1</style>
+    <foreground_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="65" green="105" blue="225">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_258</name>
+      <pv_name>$(P){CPC:$(N)}Pwr:V3_3V-I</pv_name>
+      <x>94</x>
+      <y>94</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_259</name>
+      <pv_name>$(P){CPC:$(N)}Pwr:V3_3I-I</pv_name>
+      <x>197</x>
+      <y>94</y>
+      <width>75</width>
+      <height>22</height>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_260</name>
+      <pv_name>$(P){CPC:$(N)}Pwr:V2_5V-I</pv_name>
+      <x>94</x>
+      <y>115</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_261</name>
+      <pv_name>$(P){CPC:$(N)}Pwr:V2_5I-I</pv_name>
+      <x>197</x>
+      <y>117</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_262</name>
+      <pv_name>$(P){CPC:$(N)}Pwr:V1_8V-I</pv_name>
+      <x>94</x>
+      <y>136</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_263</name>
+      <pv_name>$(P){CPC:$(N)}Pwr:V1_8I-I</pv_name>
+      <x>197</x>
+      <y>138</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_264</name>
+      <pv_name>$(P){CPC:$(N)}Pwr:V1_2DDRV-I</pv_name>
+      <x>94</x>
+      <y>157</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_265</name>
+      <pv_name>$(P){CPC:$(N)}Pwr:V1_2DDRI-I</pv_name>
+      <x>197</x>
+      <y>159</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_266</name>
+      <pv_name>$(P){CPC:$(N)}Pwr:V0_85V-I</pv_name>
+      <x>94</x>
+      <y>178</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_267</name>
+      <pv_name>$(P){CPC:$(N)}Pwr:V0_85I-I</pv_name>
+      <x>197</x>
+      <y>180</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_268</name>
+      <pv_name>$(P){CPC:$(N)}Pwr:V2_5MGTV-I</pv_name>
+      <x>94</x>
+      <y>199</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_165</name>
+      <text>+2.5V MGT</text>
+      <x>5</x>
+      <y>198</y>
+      <width>82</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_166</name>
+      <text>+1.2V MGT</text>
+      <x>5</x>
+      <y>219</y>
+      <width>82</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_167</name>
+      <text>+0.9V MGT</text>
+      <x>5</x>
+      <y>240</y>
+      <width>82</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_169</name>
+      <text>+1.8V
+</text>
+      <x>26</x>
+      <y>135</y>
+      <width>58</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_170</name>
+      <text>+3.3V</text>
+      <x>26</x>
+      <y>93</y>
+      <width>58</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_171</name>
+      <text>+2.5V
+</text>
+      <x>26</x>
+      <y>114</y>
+      <width>58</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_172</name>
+      <text>+1.2V DDR AVtt</text>
+      <x>17</x>
+      <y>156</y>
+      <width>70</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_173</name>
+      <text>+0.85V</text>
+      <x>14</x>
+      <y>177</y>
+      <width>70</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_251</name>
+      <pv_name>$(P){CPC:$(N)}Pwr:V2_5MGTI-I</pv_name>
+      <x>197</x>
+      <y>201</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_252</name>
+      <pv_name>$(P){CPC:$(N)}Pwr:V1_2MGTV-I</pv_name>
+      <x>94</x>
+      <y>220</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_253</name>
+      <pv_name>$(P){CPC:$(N)}Pwr:V1_2MGTI-I</pv_name>
+      <x>197</x>
+      <y>222</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_254</name>
+      <pv_name>$(P){CPC:$(N)}Pwr:V0_9MGTV-I</pv_name>
+      <x>94</x>
+      <y>241</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_255</name>
+      <pv_name>$(P){CPC:$(N)}Pwr:V0_9MGTI-I</pv_name>
+      <x>197</x>
+      <y>243</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_240</name>
+      <pv_name>$(P){CPC:$(N)}Pwr:P12V_DB0-I</pv_name>
+      <x>94</x>
+      <y>271</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_241</name>
+      <pv_name>$(P){CPC:$(N)}Pwr:P12I_DB0-I</pv_name>
+      <x>197</x>
+      <y>271</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_242</name>
+      <pv_name>$(P){CPC:$(N)}Pwr:N12V_DB0-I</pv_name>
+      <x>94</x>
+      <y>292</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_243</name>
+      <pv_name>$(P){CPC:$(N)}Pwr:V3_3I_DB0-I</pv_name>
+      <x>197</x>
+      <y>314</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_244</name>
+      <pv_name>$(P){CPC:$(N)}Pwr:V3_3V_DB0-I</pv_name>
+      <x>94</x>
+      <y>313</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_245</name>
+      <pv_name>$(P){CPC:$(N)}Pwr:P12V_DB1-I</pv_name>
+      <x>94</x>
+      <y>334</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_246</name>
+      <pv_name>$(P){CPC:$(N)}Pwr:P12I_DB1-I</pv_name>
+      <x>197</x>
+      <y>335</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_247</name>
+      <pv_name>$(P){CPC:$(N)}Pwr:N12V_DB1-I</pv_name>
+      <x>94</x>
+      <y>355</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_248</name>
+      <pv_name>$(P){CPC:$(N)}Pwr:V3_3I_DB1-I</pv_name>
+      <x>197</x>
+      <y>377</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_249</name>
+      <pv_name>$(P){CPC:$(N)}Pwr:V3_3V_DB1-I</pv_name>
+      <x>94</x>
+      <y>376</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_158</name>
+      <text>+12V DB0</text>
+      <x>7</x>
+      <y>269</y>
+      <width>82</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_159</name>
+      <text>-12V DB0</text>
+      <x>7</x>
+      <y>290</y>
+      <width>82</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_160</name>
+      <text>+3.3V DB0</text>
+      <x>7</x>
+      <y>311</y>
+      <width>82</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_161</name>
+      <text>+12V DB1</text>
+      <x>7</x>
+      <y>332</y>
+      <width>82</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_162</name>
+      <text>-12V DB1</text>
+      <x>7</x>
+      <y>353</y>
+      <width>82</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_163</name>
+      <text>+3.3V DB1</text>
+      <x>7</x>
+      <y>374</y>
+      <width>82</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Frequencies (MHz)</name>
+    <x>336</x>
+    <y>744</y>
+    <width>310</width>
+    <height>186</height>
+    <style>1</style>
+    <foreground_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="65" green="105" blue="225">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_314</name>
+      <pv_name>$(P){CPC:$(N)}Freq:DPLL-I</pv_name>
+      <x>149</x>
+      <y>5</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_206</name>
+      <text>DPLL</text>
+      <x>49</x>
+      <y>5</y>
+      <width>96</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_315</name>
+      <pv_name>$(P){CPC:$(N)}Freq:APLL-I</pv_name>
+      <x>149</x>
+      <y>27</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_208</name>
+      <text>APLL</text>
+      <x>49</x>
+      <y>27</y>
+      <width>96</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_316</name>
+      <pv_name>$(P){CPC:$(N)}Freq:EXTCLK-I</pv_name>
+      <x>149</x>
+      <y>49</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_209</name>
+      <text>ExtClk</text>
+      <x>49</x>
+      <y>50</y>
+      <width>96</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_317</name>
+      <pv_name>$(P){CPC:$(N)}Freq:BSYNC0-I</pv_name>
+      <x>149</x>
+      <y>71</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_210</name>
+      <text>Bsync0</text>
+      <x>49</x>
+      <y>70</y>
+      <width>96</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_318</name>
+      <pv_name>$(P){CPC:$(N)}Freq:BSYNC1-I</pv_name>
+      <x>149</x>
+      <y>93</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_211</name>
+      <text>Bsync1</text>
+      <x>49</x>
+      <y>91</y>
+      <width>96</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_319</name>
+      <pv_name>$(P){CPC:$(N)}Freq:DAC-I</pv_name>
+      <x>149</x>
+      <y>115</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_212</name>
+      <text>DAC</text>
+      <x>49</x>
+      <y>116</y>
+      <width>96</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_320</name>
+      <pv_name>$(P){CPC:$(N)}Freq:BUS-I</pv_name>
+      <x>149</x>
+      <y>138</y>
+      <width>75</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_213</name>
+      <text>PS</text>
+      <x>49</x>
+      <y>137</y>
+      <width>96</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Daughter Board 0</name>
+    <x>24</x>
+    <y>104</y>
+    <width>310</width>
+    <height>193</height>
+    <style>1</style>
+    <foreground_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="65" green="105" blue="225">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_1</name>
+      <text>DB0 Panel</text>
+      <x>215</x>
+      <y>16</y>
+      <width>74</width>
+      <height>40</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button</name>
+      <x>35</x>
+      <y>124</y>
+      <width>1</width>
+      <height>1</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_86</name>
+      <text>FilePath</text>
+      <x>21</x>
+      <y>130</y>
+      <width>72</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_87</name>
+      <text>FileName</text>
+      <x>17</x>
+      <y>148</y>
+      <width>72</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Update_147</name>
+      <pv_name>$(P){CPC:$(N)}DB0:BinFile-FilePath</pv_name>
+      <x>89</x>
+      <y>131</y>
+      <width>195</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <format>6</format>
+      <precision>6</precision>
+      <show_units>false</show_units>
+      <horizontal_alignment>1</horizontal_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Update_195</name>
+      <pv_name>$(P){CPC:$(N)}DB0:BinFile-FileName</pv_name>
+      <x>89</x>
+      <y>149</y>
+      <width>195</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <format>6</format>
+      <precision>6</precision>
+      <show_units>false</show_units>
+      <horizontal_alignment>1</horizontal_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>Boolean Button_3</name>
+      <pv_name>$(P){CPC:$(N)}DB0:BinFile-Read</pv_name>
+      <x>91</x>
+      <y>103</y>
+      <width>78</width>
+      <height>23</height>
+      <off_label>Load FPGA</off_label>
+      <off_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </off_color>
+      <on_label>Load FPGA</on_label>
+      <on_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </on_color>
+      <show_led>false</show_led>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED</name>
+      <pv_name>$(P){CPC:$(N)}DB0:Present-I</pv_name>
+      <x>101</x>
+      <y>33</y>
+      <off_color>
+        <color name="OK" red="0" green="255" blue="0">
+        </color>
+      </off_color>
+      <on_color>
+        <color name="Off" red="60" green="100" blue="60">
+        </color>
+      </on_color>
+      <square>true</square>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_242</name>
+      <text>Present</text>
+      <x>17</x>
+      <y>33</y>
+      <width>70</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_2</name>
+      <pv_name>$(P){CPC:$(N)}DB0:C2CLinkStat-I</pv_name>
+      <x>101</x>
+      <y>53</y>
+      <on_color>
+        <color name="OK" red="0" green="255" blue="0">
+        </color>
+      </on_color>
+      <square>true</square>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_250</name>
+      <text>C2C Link</text>
+      <x>17</x>
+      <y>53</y>
+      <width>72</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>Boolean Button_2</name>
+      <pv_name>$(P){CPC:$(N)}FPLedTop-SP</pv_name>
+      <bit>-1</bit>
+      <x>98</x>
+      <y>4</y>
+      <width>26</width>
+      <height>26</height>
+      <off_label></off_label>
+      <off_color>
+        <color red="0" green="100" blue="0">
+        </color>
+      </off_color>
+      <on_label></on_label>
+      <on_color>
+        <color red="0" green="255" blue="0">
+        </color>
+      </on_color>
+      <background_color>
+        <color red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <confirm_message>Are you sure you want to do this?</confirm_message>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_223</name>
+      <text>Pwr Enb</text>
+      <x>22</x>
+      <y>3</y>
+      <width>65</width>
+      <height>25</height>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Update_366</name>
+      <pv_name>$(P){CPC:$(N)}DB0:SFP_LEDS-SP</pv_name>
+      <x>221</x>
+      <y>99</y>
+      <width>51</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <format>4</format>
+      <precision>0</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Fan Tray</name>
+    <x>336</x>
+    <y>297</y>
+    <width>310</width>
+    <height>180</height>
+    <style>1</style>
+    <foreground_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="65" green="105" blue="225">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_328</name>
+      <pv_name>$(P){CPC:$(N)}Fan:Tach0-I</pv_name>
+      <x>31</x>
+      <y>27</y>
+      <width>67</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_329</name>
+      <pv_name>$(P){CPC:$(N)}Fan:Tach1-I</pv_name>
+      <x>31</x>
+      <y>48</y>
+      <width>67</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_330</name>
+      <pv_name>$(P){CPC:$(N)}Fan:Tach2-I</pv_name>
+      <x>31</x>
+      <y>69</y>
+      <width>67</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_331</name>
+      <pv_name>$(P){CPC:$(N)}Fan:Tach3-I</pv_name>
+      <x>31</x>
+      <y>90</y>
+      <width>67</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_332</name>
+      <pv_name>$(P){CPC:$(N)}Fan:Tach4-I</pv_name>
+      <x>31</x>
+      <y>111</y>
+      <width>67</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_333</name>
+      <pv_name>$(P){CPC:$(N)}Fan:Tach5-I</pv_name>
+      <x>31</x>
+      <y>132</y>
+      <width>67</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_334</name>
+      <pv_name>$(P){CPC:$(N)}Fan:Temp0-I</pv_name>
+      <x>104</x>
+      <y>27</y>
+      <width>65</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_335</name>
+      <pv_name>$(P){CPC:$(N)}Fan:Temp1-I</pv_name>
+      <x>104</x>
+      <y>48</y>
+      <width>65</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_336</name>
+      <pv_name>$(P){CPC:$(N)}Fan:Temp2-I</pv_name>
+      <x>104</x>
+      <y>69</y>
+      <width>65</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_337</name>
+      <pv_name>$(P){CPC:$(N)}Fan:Temp3-I</pv_name>
+      <x>104</x>
+      <y>90</y>
+      <width>65</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_338</name>
+      <pv_name>$(P){CPC:$(N)}Fan:Temp4-I</pv_name>
+      <x>104</x>
+      <y>111</y>
+      <width>65</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_339</name>
+      <pv_name>$(P){CPC:$(N)}Fan:Temp5-I</pv_name>
+      <x>104</x>
+      <y>132</y>
+      <width>65</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_340</name>
+      <pv_name>$(P){CPC:$(N)}Fan:DutyCycle0-I</pv_name>
+      <x>234</x>
+      <y>27</y>
+      <width>52</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_341</name>
+      <pv_name>$(P){CPC:$(N)}Fan:DutyCycle1-I</pv_name>
+      <x>234</x>
+      <y>48</y>
+      <width>52</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_342</name>
+      <pv_name>$(P){CPC:$(N)}Fan:DutyCycle2-I</pv_name>
+      <x>234</x>
+      <y>69</y>
+      <width>52</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_343</name>
+      <pv_name>$(P){CPC:$(N)}Fan:DutyCycle3-I</pv_name>
+      <x>234</x>
+      <y>90</y>
+      <width>52</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_344</name>
+      <pv_name>$(P){CPC:$(N)}Fan:DutyCycle4-I</pv_name>
+      <x>234</x>
+      <y>111</y>
+      <width>52</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_345</name>
+      <pv_name>$(P){CPC:$(N)}Fan:DutyCycle5-I</pv_name>
+      <x>234</x>
+      <y>132</y>
+      <width>52</width>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_230</name>
+      <text>Tach</text>
+      <x>45</x>
+      <y>3</y>
+      <width>46</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>2</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_231</name>
+      <text>Temp</text>
+      <x>118</x>
+      <y>2</y>
+      <width>46</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>2</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_232</name>
+      <text>Duty Cycle</text>
+      <x>189</x>
+      <y>2</y>
+      <width>80</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>2</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry</name>
+      <pv_name>$(P){CPC:$(N)}Fan:DutyCycle0-SP</pv_name>
+      <x>175</x>
+      <y>27</y>
+      <width>48</width>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_1</name>
+      <pv_name>$(P){CPC:$(N)}Fan:DutyCycle1-SP</pv_name>
+      <x>175</x>
+      <y>48</y>
+      <width>48</width>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_2</name>
+      <pv_name>$(P){CPC:$(N)}Fan:DutyCycle2-SP</pv_name>
+      <x>175</x>
+      <y>69</y>
+      <width>48</width>
+      <height>19</height>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_3</name>
+      <pv_name>$(P){CPC:$(N)}Fan:DutyCycle3-SP</pv_name>
+      <x>175</x>
+      <y>89</y>
+      <width>48</width>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_4</name>
+      <pv_name>$(P){CPC:$(N)}Fan:DutyCycle4-SP</pv_name>
+      <x>175</x>
+      <y>110</y>
+      <width>48</width>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_5</name>
+      <pv_name>$(P){CPC:$(N)}Fan:DutyCycle5-SP</pv_name>
+      <x>175</x>
+      <y>131</y>
+      <width>48</width>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>General Readbacks</name>
+    <x>24</x>
+    <y>42</y>
+    <width>622</width>
+    <height>60</height>
+    <style>1</style>
+    <foreground_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="65" green="105" blue="225">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>Label_244</name>
+      <text>FW Git Hash</text>
+      <x>17</x>
+      <y>8</y>
+      <width>92</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Update_354</name>
+      <pv_name>$(P){CPC:$(N)}GitHash-I</pv_name>
+      <x>116</x>
+      <y>8</y>
+      <width>90</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <format>4</format>
+      <precision>0</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Update_358</name>
+      <pv_name>$(P){CPC:$(N)}Rtos-Uptime-I</pv_name>
+      <x>288</x>
+      <y>8</y>
+      <width>90</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <precision>0</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_248</name>
+      <text>Uptime</text>
+      <x>226</x>
+      <y>8</y>
+      <width>55</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_249</name>
+      <text>IP Addr</text>
+      <x>410</x>
+      <y>8</y>
+      <width>55</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Update_360</name>
+      <pv_name>$(P){CPC:$(N)}Sys-IPAddrStr-I</pv_name>
+      <x>475</x>
+      <y>8</y>
+      <width>130</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <format>4</format>
+      <precision>0</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>FreeRTOS Stats</name>
+    <x>24</x>
+    <y>297</y>
+    <width>310</width>
+    <height>180</height>
+    <style>1</style>
+    <foreground_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="65" green="105" blue="225">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Update_363</name>
+      <pv_name>$(P){CPC:$(N)}Lwip-DropCnt-I</pv_name>
+      <x>145</x>
+      <y>81</y>
+      <width>90</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <precision>0</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_253</name>
+      <text>Lwip DropCnt</text>
+      <x>39</x>
+      <y>81</y>
+      <width>92</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Update_364</name>
+      <pv_name>$(P){CPC:$(N)}Lwip-XmitCnt-I</pv_name>
+      <x>145</x>
+      <y>41</y>
+      <width>90</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <precision>0</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_254</name>
+      <text>Lwip XmitCnt</text>
+      <x>39</x>
+      <y>41</y>
+      <width>92</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Update_365</name>
+      <pv_name>$(P){CPC:$(N)}Lwip-RecvCnt-I</pv_name>
+      <x>145</x>
+      <y>61</y>
+      <width>90</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <precision>0</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_255</name>
+      <text>Lwip RecvCnt</text>
+      <x>39</x>
+      <y>61</y>
+      <width>92</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Update_367</name>
+      <pv_name>$(P){CPC:$(N)}Rtos-Nthreads-I</pv_name>
+      <x>145</x>
+      <y>16</y>
+      <width>90</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <precision>0</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_257</name>
+      <text>Num Threads</text>
+      <x>38</x>
+      <y>16</y>
+      <width>92</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Update_368</name>
+      <pv_name>$(P){CPC:$(N)}Sys-MemAvail-I</pv_name>
+      <x>145</x>
+      <y>109</y>
+      <width>90</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <precision>0</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_258</name>
+      <text>Mem Avail</text>
+      <x>34</x>
+      <y>109</y>
+      <width>92</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Update_369</name>
+      <pv_name>$(P){CPC:$(N)}Sys-MemUsed-I</pv_name>
+      <x>145</x>
+      <y>129</y>
+      <width>90</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <precision>0</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_259</name>
+      <text>Mem Used</text>
+      <x>34</x>
+      <y>129</y>
+      <width>92</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_157</name>
+    <text>-12V Input</text>
+    <x>54</x>
+    <y>554</y>
+    <width>58</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_164</name>
+    <text>+6V Input</text>
+    <x>55</x>
+    <y>575</y>
+    <width>58</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_168</name>
+    <text>+12V Input</text>
+    <x>54</x>
+    <y>533</y>
+    <width>58</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_239</name>
+    <pv_name>$(P){CPC:$(N)}Pwr:N12V-I</pv_name>
+    <x>119</x>
+    <y>555</y>
+    <width>75</width>
+    <background_color>
+      <color name="Background" red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_250</name>
+    <pv_name>$(P){CPC:$(N)}Pwr:V6V-I</pv_name>
+    <x>119</x>
+    <y>576</y>
+    <width>75</width>
+    <background_color>
+      <color name="Background" red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_148</name>
+    <text>Voltage (V)</text>
+    <x>114</x>
+    <y>513</y>
+    <width>84</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_149</name>
+    <text>Current (A)</text>
+    <x>226</x>
+    <y>513</y>
+    <width>78</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_256</name>
+    <pv_name>$(P){CPC:$(N)}Pwr:VinV-I</pv_name>
+    <x>119</x>
+    <y>534</y>
+    <width>75</width>
+    <background_color>
+      <color name="Background" red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_257</name>
+    <pv_name>$(P){CPC:$(N)}Pwr:VinI-I</pv_name>
+    <x>222</x>
+    <y>534</y>
+    <width>75</width>
+    <background_color>
+      <color name="Background" red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Daughter Board 1</name>
+    <x>336</x>
+    <y>104</y>
+    <width>310</width>
+    <height>193</height>
+    <style>1</style>
+    <foreground_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="65" green="105" blue="225">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_2</name>
+      <text>DB1 Panel</text>
+      <x>215</x>
+      <y>17</y>
+      <width>74</width>
+      <height>40</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_3</name>
+      <x>35</x>
+      <y>125</y>
+      <width>1</width>
+      <height>1</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_251</name>
+      <text>FilePath</text>
+      <x>21</x>
+      <y>131</y>
+      <width>72</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_252</name>
+      <text>FileName</text>
+      <x>17</x>
+      <y>149</y>
+      <width>72</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Update_361</name>
+      <pv_name>$(P){CPC:$(N)}DB1:BinFile-FilePath</pv_name>
+      <x>89</x>
+      <y>132</y>
+      <width>195</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <format>6</format>
+      <precision>6</precision>
+      <show_units>false</show_units>
+      <horizontal_alignment>1</horizontal_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Update_362</name>
+      <pv_name>$(P){CPC:$(N)}DB1:BinFile-FileName</pv_name>
+      <x>89</x>
+      <y>150</y>
+      <width>195</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <format>6</format>
+      <precision>6</precision>
+      <show_units>false</show_units>
+      <horizontal_alignment>1</horizontal_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_3</name>
+      <pv_name>$(P){CPC:$(N)}DB1:Present-I</pv_name>
+      <x>101</x>
+      <y>34</y>
+      <off_color>
+        <color name="OK" red="0" green="255" blue="0">
+        </color>
+      </off_color>
+      <on_color>
+        <color name="Off" red="60" green="100" blue="60">
+        </color>
+      </on_color>
+      <square>true</square>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_260</name>
+      <text>Present</text>
+      <x>17</x>
+      <y>34</y>
+      <width>70</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_4</name>
+      <pv_name>$(P){CPC:$(N)}DB1:C2CLinkStat-I</pv_name>
+      <x>101</x>
+      <y>54</y>
+      <on_color>
+        <color name="OK" red="0" green="255" blue="0">
+        </color>
+      </on_color>
+      <square>true</square>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_261</name>
+      <text>C2C Link</text>
+      <x>17</x>
+      <y>54</y>
+      <width>72</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>Boolean Button_7</name>
+      <pv_name>$(P){CPC:$(N)}FPLedBot-SP</pv_name>
+      <bit>-1</bit>
+      <x>98</x>
+      <y>5</y>
+      <width>26</width>
+      <height>26</height>
+      <off_label></off_label>
+      <off_color>
+        <color red="0" green="100" blue="0">
+        </color>
+      </off_color>
+      <on_label></on_label>
+      <on_color>
+        <color red="0" green="255" blue="0">
+        </color>
+      </on_color>
+      <background_color>
+        <color red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <confirm_message>Are you sure you want to do this?</confirm_message>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_262</name>
+      <text>Pwr Enb</text>
+      <x>22</x>
+      <y>4</y>
+      <width>65</width>
+      <height>25</height>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>Boolean Button_8</name>
+      <pv_name>$(P){CPC:$(N)}DB1:BinFile-Read</pv_name>
+      <x>91</x>
+      <y>105</y>
+      <width>78</width>
+      <height>23</height>
+      <off_label>Load FPGA</off_label>
+      <off_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </off_color>
+      <on_label>Load FPGA</on_label>
+      <on_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </on_color>
+      <show_led>false</show_led>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Update_370</name>
+      <pv_name>$(P){CPC:$(N)}DB1:SFP_LEDS-SP</pv_name>
+      <x>223</x>
+      <y>99</y>
+      <width>51</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <format>4</format>
+      <precision>0</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+</display>

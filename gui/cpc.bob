@@ -1,0 +1,2440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-11-12 09:27:46 by mead-->
+<display version="2.0.0">
+  <name>$(PRI):$(Sec)-BPM$(N)LN_LTB_bpm_Ctrl</name>
+  <width>900</width>
+  <height>800</height>
+  <background_color>
+    <color red="240" green="240" blue="240">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <grid_step_x>6</grid_step_x>
+  <grid_step_y>6</grid_step_y>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_4</name>
+    <macros>
+      <pv_name></pv_name>
+    </macros>
+    <height>100</height>
+    <line_width>1</line_width>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_6</name>
+    <text>Common Hardware Platform</text>
+    <width>882</width>
+    <height>30</height>
+    <font>
+      <font family="Arial" style="BOLD" size="17.821782178217823">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="29" green="40" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="135" green="181" blue="255">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_75</name>
+    <text>Vcc
+</text>
+    <x>412</x>
+    <y>600</y>
+    <width>46</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>2</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_218</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Temp:PwrMgmt-I</pv_name>
+    <x>470</x>
+    <y>375</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_175</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Temp:FpgaPS-I</pv_name>
+    <x>470</x>
+    <y>182</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_174</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Temp:DfeSense0-I</pv_name>
+    <x>470</x>
+    <y>211</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_5</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Temp:DfeSense1-I</pv_name>
+    <x>470</x>
+    <y>230</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_6</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Temp:DfeSense2-I</pv_name>
+    <x>470</x>
+    <y>249</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_7</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Temp:DfeSense3-I</pv_name>
+    <x>470</x>
+    <y>268</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_5</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Temp:RegSense1-I</pv_name>
+    <x>470</x>
+    <y>295</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_6</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Temp:RegSense2-I</pv_name>
+    <x>470</x>
+    <y>314</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_7</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Temp:RegSense3-I</pv_name>
+    <x>470</x>
+    <y>333</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_15</name>
+    <text>Carrier 2</text>
+    <x>369</x>
+    <y>231</y>
+    <width>96</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_16</name>
+    <text>Carrier 3</text>
+    <x>369</x>
+    <y>249</y>
+    <width>96</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_17</name>
+    <text>Carrier 4</text>
+    <x>369</x>
+    <y>268</y>
+    <width>96</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_97</name>
+    <text>Temperatures</text>
+    <x>372</x>
+    <y>117</y>
+    <width>209</width>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_86</name>
+    <text>+12V Input</text>
+    <x>54</x>
+    <y>159</y>
+    <width>58</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_89</name>
+    <text>+1.8V
+</text>
+    <x>54</x>
+    <y>267</y>
+    <width>58</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_164</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Pwr:VinV-I</pv_name>
+    <x>117</x>
+    <y>159</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_90</name>
+    <text>+3.3V</text>
+    <x>54</x>
+    <y>222</y>
+    <width>58</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_198</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Pwr:VinI-I</pv_name>
+    <x>220</x>
+    <y>159</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_199</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Pwr:V3_3V-I</pv_name>
+    <x>117</x>
+    <y>222</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_200</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Pwr:V3_3I-I</pv_name>
+    <x>220</x>
+    <y>222</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_164</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Pwr:V2_5V-I</pv_name>
+    <x>117</x>
+    <y>244</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_198</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Pwr:V2_5I-I</pv_name>
+    <x>220</x>
+    <y>244</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_199</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Pwr:V1_8V-I</pv_name>
+    <x>117</x>
+    <y>266</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_200</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Pwr:V1_8I-I</pv_name>
+    <x>220</x>
+    <y>266</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_89</name>
+    <text>+2.5V
+</text>
+    <x>54</x>
+    <y>245</y>
+    <width>58</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_199</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Pwr:V1_2DDRV-I</pv_name>
+    <x>117</x>
+    <y>288</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_200</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Pwr:V1_2DDRI-I</pv_name>
+    <x>220</x>
+    <y>288</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_92</name>
+    <text>+1.2V DDR AVtt</text>
+    <x>42</x>
+    <y>287</y>
+    <width>70</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_199</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Pwr:V0_85V-I</pv_name>
+    <x>117</x>
+    <y>310</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_200</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Pwr:V0_85I-I</pv_name>
+    <x>220</x>
+    <y>310</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_92</name>
+    <text>+0.85V</text>
+    <x>42</x>
+    <y>309</y>
+    <width>70</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_199</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Pwr:V2_5MGTV-I</pv_name>
+    <x>117</x>
+    <y>332</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_200</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Pwr:V2_5MGTI-I</pv_name>
+    <x>220</x>
+    <y>332</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_92</name>
+    <text>+2.5V MGT</text>
+    <x>30</x>
+    <y>332</y>
+    <width>82</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_199</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Pwr:V1_2MGTV-I</pv_name>
+    <x>117</x>
+    <y>354</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_200</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Pwr:V1_2MGTI-I</pv_name>
+    <x>220</x>
+    <y>354</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_92</name>
+    <text>+1.2V MGT</text>
+    <x>30</x>
+    <y>353</y>
+    <width>82</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_199</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Pwr:V0_9MGTV-I</pv_name>
+    <x>117</x>
+    <y>375</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_200</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Pwr:V0_9MGTI-I</pv_name>
+    <x>220</x>
+    <y>375</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_92</name>
+    <text>+0.9V MGT</text>
+    <x>30</x>
+    <y>374</y>
+    <width>82</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_86</name>
+    <text>Voltage (V)</text>
+    <x>112</x>
+    <y>138</y>
+    <width>84</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_86</name>
+    <text>Current (A)</text>
+    <x>224</x>
+    <y>138</y>
+    <width>78</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_15</name>
+    <text>Regulator 1</text>
+    <x>367</x>
+    <y>295</y>
+    <width>96</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_16</name>
+    <text>Regulator 2</text>
+    <x>367</x>
+    <y>314</y>
+    <width>96</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_17</name>
+    <text>Regulator 3</text>
+    <x>367</x>
+    <y>333</y>
+    <width>96</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_128</name>
+    <text>Pwr Mgmt</text>
+    <x>367</x>
+    <y>375</y>
+    <width>96</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_97</name>
+    <text>Power</text>
+    <x>111</x>
+    <y>116</y>
+    <width>209</width>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_153</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}SFP4:Temp-I</pv_name>
+    <x>253</x>
+    <y>698</y>
+    <width>76</width>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_138</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}SFP1:Temp-I</pv_name>
+    <x>253</x>
+    <y>638</y>
+    <width>76</width>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_151</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}SFP4:TxPwr-I</pv_name>
+    <x>101</x>
+    <y>698</y>
+    <width>76</width>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_133</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}SFP0:Temp-I</pv_name>
+    <x>253</x>
+    <y>619</y>
+    <width>76</width>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_96</name>
+    <text>SFP Readbacks</text>
+    <x>149</x>
+    <y>581</y>
+    <width>209</width>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_76</name>
+    <text>SFP 1</text>
+    <x>52</x>
+    <y>638</y>
+    <width>46</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>2</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_71</name>
+    <text>Tx Pwr</text>
+    <x>105</x>
+    <y>600</y>
+    <width>46</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>2</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_73</name>
+    <text>Temp</text>
+    <x>263</x>
+    <y>600</y>
+    <width>46</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>2</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_74</name>
+    <text>TxBias</text>
+    <x>341</x>
+    <y>600</y>
+    <width>46</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>2</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_136</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}SFP1:TxPwr-I</pv_name>
+    <x>101</x>
+    <y>638</y>
+    <width>76</width>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_152</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}SFP4:RxPwr-I</pv_name>
+    <x>176</x>
+    <y>698</y>
+    <width>76</width>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_147</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}SFP3:RxPwr-I</pv_name>
+    <x>176</x>
+    <y>679</y>
+    <width>76</width>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_80</name>
+    <text>SFP 4</text>
+    <x>52</x>
+    <y>698</y>
+    <width>46</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>2</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_81</name>
+    <text>SFP 5</text>
+    <x>52</x>
+    <y>717</y>
+    <width>46</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>2</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_134</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}SFP0:TxBias-I</pv_name>
+    <x>328</x>
+    <y>619</y>
+    <width>76</width>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_159</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}SFP5:TxBias-I</pv_name>
+    <x>328</x>
+    <y>717</y>
+    <width>76</width>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_144</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}SFP2:TxBias-I</pv_name>
+    <x>328</x>
+    <y>657</y>
+    <width>76</width>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_139</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}SFP1:TxBias-I</pv_name>
+    <x>328</x>
+    <y>638</y>
+    <width>76</width>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_70</name>
+    <text>SFP 0</text>
+    <x>52</x>
+    <y>619</y>
+    <width>46</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>2</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_143</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}SFP2:Temp-I</pv_name>
+    <x>253</x>
+    <y>657</y>
+    <width>76</width>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_146</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}SFP3:TxPwr-I</pv_name>
+    <x>101</x>
+    <y>679</y>
+    <width>76</width>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_142</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}SFP2:RxPwr-I</pv_name>
+    <x>176</x>
+    <y>657</y>
+    <width>76</width>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_149</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}SFP3:TxBias-I</pv_name>
+    <x>328</x>
+    <y>679</y>
+    <width>76</width>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_148</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}SFP3:Temp-I</pv_name>
+    <x>253</x>
+    <y>679</y>
+    <width>76</width>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_132</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}SFP0:RxPwr-I</pv_name>
+    <x>176</x>
+    <y>619</y>
+    <width>76</width>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_157</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}SFP5:RxPwr-I</pv_name>
+    <x>176</x>
+    <y>717</y>
+    <width>76</width>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_72</name>
+    <text>Rx Pwr</text>
+    <x>187</x>
+    <y>600</y>
+    <width>46</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>2</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_137</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}SFP1:RxPwr-I</pv_name>
+    <x>176</x>
+    <y>638</y>
+    <width>76</width>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_131</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}SFP0:TxPwr-I</pv_name>
+    <x>101</x>
+    <y>619</y>
+    <width>76</width>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_158</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}SFP5:Temp-I</pv_name>
+    <x>253</x>
+    <y>717</y>
+    <width>76</width>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_78</name>
+    <text>SFP 2</text>
+    <x>52</x>
+    <y>657</y>
+    <width>46</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>2</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_141</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}SFP2:TxPwr-I</pv_name>
+    <x>101</x>
+    <y>657</y>
+    <width>76</width>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_156</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}SFP5:TxPwr-I</pv_name>
+    <x>101</x>
+    <y>717</y>
+    <width>76</width>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_79</name>
+    <text>SFP 3</text>
+    <x>52</x>
+    <y>679</y>
+    <width>46</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>2</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_154</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}SFP4:TxBias-I</pv_name>
+    <x>328</x>
+    <y>698</y>
+    <width>76</width>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_160</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}SFP5:Vcc-I</pv_name>
+    <x>403</x>
+    <y>717</y>
+    <width>76</width>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_155</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}SFP4:Vcc-I</pv_name>
+    <x>403</x>
+    <y>698</y>
+    <width>76</width>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_150</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}SFP3:Vcc-I</pv_name>
+    <x>403</x>
+    <y>679</y>
+    <width>76</width>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_145</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}SFP2:Vcc-I</pv_name>
+    <x>403</x>
+    <y>657</y>
+    <width>76</width>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_140</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}SFP1:Vcc-I</pv_name>
+    <x>403</x>
+    <y>638</y>
+    <width>76</width>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_135</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}SFP0:Vcc-I</pv_name>
+    <x>403</x>
+    <y>619</y>
+    <width>76</width>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_99</name>
+    <text>FPGA PS </text>
+    <x>369</x>
+    <y>182</y>
+    <width>96</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_95</name>
+    <text>Carrier 1</text>
+    <x>369</x>
+    <y>211</y>
+    <width>96</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_82</name>
+    <text>System Uptime</text>
+    <x>18</x>
+    <y>66</y>
+    <width>125</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_161</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Sys:Uptime-I</pv_name>
+    <x>142</x>
+    <y>66</y>
+    <background_color>
+      <color red="192" green="191" blue="188">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Fpga:FwVer-I</pv_name>
+    <x>143</x>
+    <y>42</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_10</name>
+    <text>Firmware Hash</text>
+    <x>18</x>
+    <y>42</y>
+    <width>126</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}FPLedTop-SP</pv_name>
+    <bit>-1</bit>
+    <x>637</x>
+    <y>503</y>
+    <width>51</width>
+    <height>33</height>
+    <off_label></off_label>
+    <off_color>
+      <color red="0" green="100" blue="0">
+      </color>
+    </off_color>
+    <on_label></on_label>
+    <on_color>
+      <color red="0" green="255" blue="0">
+      </color>
+    </on_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <confirm_message>Are you sure you want to do this?</confirm_message>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_1</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}FPLedBot-SP</pv_name>
+    <bit>-1</bit>
+    <x>637</x>
+    <y>536</y>
+    <width>51</width>
+    <height>33</height>
+    <off_label></off_label>
+    <off_color>
+      <color red="0" green="100" blue="0">
+      </color>
+    </off_color>
+    <on_label></on_label>
+    <on_color>
+      <color red="0" green="255" blue="0">
+      </color>
+    </on_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <confirm_message>Are you sure you want to do this?</confirm_message>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>DB0 Power Enable</text>
+    <x>701</x>
+    <y>503</y>
+    <width>121</width>
+    <height>25</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_8</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Temp:RegSense4-I</pv_name>
+    <x>468</x>
+    <y>353</y>
+    <width>102</width>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_18</name>
+    <text>Regulator 4</text>
+    <x>367</x>
+    <y>353</y>
+    <width>96</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_165</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Pwr:N12V-I</pv_name>
+    <x>118</x>
+    <y>180</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_87</name>
+    <text>-12V Input</text>
+    <x>54</x>
+    <y>180</y>
+    <width>58</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_201</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Pwr:P12V_DB0-I</pv_name>
+    <x>117</x>
+    <y>397</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_202</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Pwr:P12I_DB0-I</pv_name>
+    <x>220</x>
+    <y>397</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_93</name>
+    <text>+12V DB0</text>
+    <x>30</x>
+    <y>396</y>
+    <width>82</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_203</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Pwr:N12V_DB0-I</pv_name>
+    <x>117</x>
+    <y>419</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_94</name>
+    <text>-12V DB0</text>
+    <x>30</x>
+    <y>417</y>
+    <width>82</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_204</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Pwr:V3_3I_DB0-I</pv_name>
+    <x>220</x>
+    <y>440</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_205</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Pwr:V3_3V_DB0-I</pv_name>
+    <x>117</x>
+    <y>440</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_98</name>
+    <text>+3.3V DB0</text>
+    <x>30</x>
+    <y>438</y>
+    <width>82</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_206</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Pwr:P12V_DB1-I</pv_name>
+    <x>117</x>
+    <y>461</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_207</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Pwr:P12I_DB1-I</pv_name>
+    <x>220</x>
+    <y>461</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_100</name>
+    <text>+12V DB1</text>
+    <x>30</x>
+    <y>459</y>
+    <width>82</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_208</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Pwr:N12V_DB1-I</pv_name>
+    <x>117</x>
+    <y>482</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_101</name>
+    <text>-12V DB1</text>
+    <x>30</x>
+    <y>480</y>
+    <width>82</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_209</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Pwr:V3_3I_DB1-I</pv_name>
+    <x>220</x>
+    <y>503</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_210</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Pwr:V3_3V_DB1-I</pv_name>
+    <x>117</x>
+    <y>503</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_102</name>
+    <text>+3.3V DB1</text>
+    <x>30</x>
+    <y>502</y>
+    <width>82</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_211</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Pwr:V6V-I</pv_name>
+    <x>118</x>
+    <y>201</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_103</name>
+    <text>+6V Input</text>
+    <x>54</x>
+    <y>201</y>
+    <width>58</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_104</name>
+    <text>DB1 Power Enable</text>
+    <x>701</x>
+    <y>536</y>
+    <width>121</width>
+    <height>25</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_219</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Freq:DPLL-I</pv_name>
+    <x>702</x>
+    <y>150</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_129</name>
+    <text>DPLL</text>
+    <x>602</x>
+    <y>150</y>
+    <width>96</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_130</name>
+    <text>Frequencies</text>
+    <x>637</x>
+    <y>117</y>
+    <width>209</width>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_220</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Freq:APLL-I</pv_name>
+    <x>702</x>
+    <y>172</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_131</name>
+    <text>APLL</text>
+    <x>602</x>
+    <y>172</y>
+    <width>96</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_223</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Freq:EXTCLK-I</pv_name>
+    <x>702</x>
+    <y>194</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_132</name>
+    <text>ExtClk</text>
+    <x>602</x>
+    <y>195</y>
+    <width>96</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_224</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Freq:BSYNC0-I</pv_name>
+    <x>702</x>
+    <y>216</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_133</name>
+    <text>Bsync0</text>
+    <x>602</x>
+    <y>215</y>
+    <width>96</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_225</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Freq:BSYNC1-I</pv_name>
+    <x>702</x>
+    <y>238</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_134</name>
+    <text>Bsync1</text>
+    <x>602</x>
+    <y>236</y>
+    <width>96</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_226</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Freq:DAC-I</pv_name>
+    <x>702</x>
+    <y>260</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_135</name>
+    <text>DAC</text>
+    <x>602</x>
+    <y>261</y>
+    <width>96</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_227</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Freq:BUS-I</pv_name>
+    <x>702</x>
+    <y>283</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_136</name>
+    <text>PS</text>
+    <x>602</x>
+    <y>282</y>
+    <width>96</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_229</name>
+    <pv_name>$(PRI)-BI{BPM:$(N)}Temp:FpgaPL-I</pv_name>
+    <x>470</x>
+    <y>159</y>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_138</name>
+    <text>FPGA PL</text>
+    <x>369</x>
+    <y>159</y>
+    <width>96</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+</display>

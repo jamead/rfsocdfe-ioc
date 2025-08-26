@@ -1,0 +1,33 @@
+#############################################################
+#
+#       Database for Common Hardware Carrier IOC
+#
+#############################################################
+
+
+
+
+############# Control PV's ##########################################
+
+
+#SFP FP LEDS
+record(longout, "$(P){CPC:$(NO)}DB0:SFP_LEDS-SP") {
+    field(DESC, "SFP Leds on SFP")
+    field(DTYP, "PSC Single I32")
+    field(OUT , "@cpc$(NO) 1 0")
+    field(FLNK, "$(P){CPC:$(NO)}GoRegSingleWrite1")
+}
+
+
+#SFP FP LEDS
+record(longout, "$(P){CPC:$(NO)}DB1:SFP_LEDS-SP") {
+    field(DESC, "SFP Leds on SFP")
+    field(DTYP, "PSC Single I32")
+    field(OUT , "@cpc$(NO) 2 0")
+    field(FLNK, "$(P){CPC:$(NO)}GoRegSingleWrite2")
+}
+
+ 
+
+
+

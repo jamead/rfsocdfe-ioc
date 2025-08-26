@@ -1,0 +1,2 @@
+#registrar(readBinFile)
+function(readBinFile)

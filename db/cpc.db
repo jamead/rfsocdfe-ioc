@@ -1,0 +1,887 @@
+#############################################################
+#
+#       BPM Database for Common Hardware Carrier IOC
+#
+#############################################################
+
+
+record(bo, "$(P){BPM:$(NO)}wfm-RECONNECT") {
+    field(DTYP, "PSC Ctrl Reconnect")
+    field(OUT , "@chp_wfm_rx_$(NO)")
+    field(ZNAM, "Wfm Reconnect")
+    field(ONAM, "Wfm Reconnect")
+}
+
+
+record(bo, "$(P){BPM:$(NO)}TX-RECONNECT") {
+    field(DTYP, "PSC Ctrl Reconnect")
+    field(OUT , "@chp_tx_$(NO)")
+    field(ZNAM, "Ctrl Reconnect")
+    field(ONAM, "Ctrl Reconnect")
+}
+
+record(bo, "$(P){BPM:$(NO)}RX10Hz-RECONNECT") {
+    field(DTYP, "PSC Ctrl Reconnect")
+    field(OUT , "@chp_stat_rx_$(NO)")
+    field(ZNAM, "10Hz Rx Reconnect")
+    field(ONAM, "10Hz Rx Reconnect")
+}
+
+
+
+# Flush reg to socket buffer, trigger send to send all socket buffer to PSC 
+record(bo, "$(P){BPM:$(NO)}send") { 
+    field(DTYP, "PSC Ctrl Send All") 
+    field(OUT , "@chp_tx_$(NO)") 
+    field(ZNAM, "Send") 
+    field(ONAM, "Send") 
+} 
+ 
+# Write a single register
+record(longout, "$(P){BPM:$(NO)}GoRegSingleWrite") {
+    field(DTYP, "PSC Ctrl Send")
+    field(OUT , "@chp_tx_$(NO)")
+    field(VAL , "1") 
+    field(FLNK, "$(P){BPM:$(NO)}send")
+}
+
+
+############# Control PV's ##########################################
+
+
+# TOP FP LED
+record(bo, "$(P){BPM:$(NO)}FPLedTop-SP") {
+    field(DESC, "Top FP LED")
+    field(DTYP, "PSC Single U32")
+    field(OUT , "@chp_tx_$(NO) 1 0")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+    field(FLNK, "$(P){BPM:$(NO)}GoRegSingleWrite")
+}
+
+# BOT FP LED
+record(bo, "$(P){BPM:$(NO)}FPLedBot-SP") {
+    field(DESC, "Bot FP LED")
+    field(DTYP, "PSC Single U32")
+    field(OUT , "@chp_tx_$(NO) 1 4")
+    field(ZNAM,"Off")
+    field(ONAM,"On")
+    field(FLNK, "$(P){BPM:$(NO)}GoRegSingleWrite")
+}
+
+
+
+ 
+
+############# 10Hz Status PV's (MSG ID 30) #########################
+
+record(ai, "$(P){BPM:$(NO)}Temp:Sense0-I") {
+    field(DESC, "CHP Temp0 read")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 30 0")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(EGU,  "C")
+    field(HIHI,"60")
+    field(LOLO,"-0.5")
+    field(HIGH,"50")
+    field(LOW,"10")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+
+record(ai, "$(P){BPM:$(NO)}Temp:Sense1-I") {
+    field(DESC, "CHP Temp1 read")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 30 4")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(EGU,  "C")
+    field(HIHI,"60")
+    field(LOLO,"-0.5")
+    field(HIGH,"50")
+    field(LOW,"10")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+
+record(ai, "$(P){BPM:$(NO)}Temp:Sense2-I") {
+    field(DESC, "CHP Temp2 read")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 30 8")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(EGU,  "C")
+    field(HIHI,"60")
+    field(LOLO,"-0.5")
+    field(HIGH,"50")
+    field(LOW,"10")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+
+record(ai, "$(P){BPM:$(NO)}Temp:Sense3-I") {
+    field(DESC, "DFE Temp3 read")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 30 12")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(EGU,  "C")
+    field(HIHI,"60")
+    field(LOLO,"-0.5")
+    field(HIGH,"50")
+    field(LOW,"10")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+
+
+######### 1Hz System Status PV's (MSG ID 32) ####################
+
+
+
+record(longin, "$(P){BPM:$(NO)}Fpga:FwVer-I") {
+    field(DESC, "Firmware Version")
+    field(DTYP, "PSC Reg")
+    field(INP , "@chp_stat_rx_$(NO) 32 0")
+    field(SCAN,"I/O Intr")
+}
+ 
+
+
+
+record(ai, "$(P){BPM:$(NO)}Temp:DfeSense0-I") {
+    field(DESC, "DFE Temp0 read")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 4")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(EGU,  "C")
+    field(HIHI,"60")
+    field(LOLO,"-0.5")
+    field(HIGH,"50")
+    field(LOW,"10")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+ 
+
+record(ai, "$(P){BPM:$(NO)}Temp:DfeSense1-I") {
+    field(DESC, "DFE Temp1 read")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 8")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(EGU,  "C")
+    field(HIHI,"60")
+    field(LOLO,"-0.5")
+    field(HIGH,"50")
+    field(LOW,"10")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+
+record(ai, "$(P){BPM:$(NO)}Temp:DfeSense2-I") {
+    field(DESC, "DFE Temp2 read")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 12")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(EGU,  "C")
+    field(HIHI,"60")
+    field(LOLO,"-0.5")
+    field(HIGH,"50")
+    field(LOW,"10")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+
+
+record(ai, "$(P){BPM:$(NO)}Temp:DfeSense3-I") {
+    field(DESC, "DFE Temp3 read")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 16")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(EGU,  "C")
+    field(HIHI,"60")
+    field(LOLO,"-0.5")
+    field(HIGH,"50")
+    field(LOW,"10")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+ 
+
+record(ai, "$(P){BPM:$(NO)}Pwr:VinV-I") {
+    field(DESC, "Input Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 40")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(HIHI,"6")
+    field(LOLO,"4")
+    field(HIGH,"5.5")
+    field(LOW,"4.5")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+
+record(ai, "$(P){BPM:$(NO)}Pwr:VinI-I") {
+    field(DESC, "Input Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 44")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(HIHI,"2")
+    field(LOLO,"0")
+    field(HIGH,"2")
+    field(LOW,"0")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+
+record(ai, "$(P){BPM:$(NO)}Pwr:V3_3V-I") {
+    field(DESC, "3.3V Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 48")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(HIHI,"3.6")
+    field(LOLO,"")
+    field(HIGH,"3.5")
+    field(LOW,"3.1")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+
+record(ai, "$(P){BPM:$(NO)}Pwr:V3_3I-I") {
+    field(DESC, "3.3V Current")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 52")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(HIHI,"2")
+    field(LOLO,"0")
+    field(HIGH,"2")
+    field(LOW,"0")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+
+record(ai, "$(P){BPM:$(NO)}Pwr:V2_5V-I") {
+    field(DESC, "2.5V Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 56")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(HIHI,"2.8")
+    field(LOLO,"2.2")
+    field(HIGH,"2.7")
+    field(LOW,"2.3")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+
+record(ai, "$(P){BPM:$(NO)}Pwr:V2_5I-I") {
+    field(DESC, "2.5V Current")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 60")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(HIHI,"2")
+    field(LOLO,"0")
+    field(HIGH,"2")
+    field(LOW,"0")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+
+record(ai, "$(P){BPM:$(NO)}Pwr:V1_8V-I") {
+    field(DESC, "1.8V Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 64")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(HIHI,"2.0")
+    field(LOLO,"1.6")
+    field(HIGH,"1.9")
+    field(LOW,"1.7")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+
+record(ai, "$(P){BPM:$(NO)}Pwr:V1_8I-I") {
+    field(DESC, "1.8V Current")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 68")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(HIHI,"2")
+    field(LOLO,"0")
+    field(HIGH,"2")
+    field(LOW,"0")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+
+
+
+record(ai, "$(P){BPM:$(NO)}Pwr:V1_2DDRV-I") {
+    field(DESC, "1.2V DDR Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 72")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(HIHI,"1.5")
+    field(LOLO,"0.9")
+    field(HIGH,"1.4")
+    field(LOW,"1.0")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+
+record(ai, "$(P){BPM:$(NO)}Pwr:V1_2DDRI-I") {
+    field(DESC, "1.2V DDR Current")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 76")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(HIHI,"2")
+    field(LOLO,"0")
+    field(HIGH,"2")
+    field(LOW,"0")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+
+record(ai, "$(P){BPM:$(NO)}Pwr:V0_85V-I") {
+    field(DESC, "0.85V DDR Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 80")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(HIHI,"1.0")
+    field(LOLO,"0.7")
+    field(HIGH,"0.9")
+    field(LOW,"0.8")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+
+
+record(ai, "$(P){BPM:$(NO)}Pwr:V0_85I-I") {
+    field(DESC, "1.8V Current")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 84")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(HIHI,"2")
+    field(LOLO,"0")
+    field(HIGH,"2")
+    field(LOW,"0")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+
+record(ai, "$(P){BPM:$(NO)}Pwr:V2_5MGTV-I") {
+    field(DESC, "0.85V Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 88")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(HIHI,"2.7")
+    field(LOLO,"2.3")
+    field(HIGH,"2.6")
+    field(LOW,"2.4")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+
+record(ai, "$(P){BPM:$(NO)}Pwr:V2_5MGTI-I") {
+    field(DESC, "0.85V Current")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 92")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(HIHI,"2")
+    field(LOLO,"0")
+    field(HIGH,"2")
+    field(LOW,"0")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+
+
+record(ai, "$(P){BPM:$(NO)}Pwr:V1_2MGTV-I") {
+    field(DESC, "1.2V MGT Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 96")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(HIHI,"1.4")
+    field(LOLO,"1.0")
+    field(HIGH,"1.3")
+    field(LOW,"1.1")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+
+record(ai, "$(P){BPM:$(NO)}Pwr:V1_2MGTI-I") {
+    field(DESC, "1.2V MGT Current")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 100")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(HIHI,"2")
+    field(LOLO,"0")
+    field(HIGH,"2")
+    field(LOW,"0")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+
+record(ai, "$(P){BPM:$(NO)}Pwr:V0_9MGTV-I") {
+    field(DESC, "0.9V MGT Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 104")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(HIHI,"1.1")
+    field(LOLO,"0.7")
+    field(HIGH,"1.0")
+    field(LOW,"0.8")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+
+record(ai, "$(P){BPM:$(NO)}Pwr:V0_9MGTI-I") {
+    field(DESC, "0.9V MGT Current")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 108")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(HIHI,"2")
+    field(LOLO,"0")
+    field(HIGH,"2")
+    field(LOW,"0")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+
+record(ai, "$(P){BPM:$(NO)}Pwr:V6V-I") {
+    field(DESC, "0.9V MGT Current")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 112")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(HIHI,"7")
+    field(LOLO,"5")
+    field(HIGH,"6.5")
+    field(LOW,"5.5")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+
+
+####  DB0 Voltages and Currents
+
+record(ai, "$(P){BPM:$(NO)}Pwr:P12V_DB0-I") {
+    field(DESC, "+12V DB0 Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 116")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+
+record(ai, "$(P){BPM:$(NO)}Pwr:P12I_DB0-I") {
+    field(DESC, "+12V DB0 Current")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 120")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+
+record(ai, "$(P){BPM:$(NO)}Pwr:N12V_DB0-I") {
+    field(DESC, "-12V DB0 Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 124")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+
+record(ai, "$(P){BPM:$(NO)}Pwr:V3_3V_DB0-I") {
+    field(DESC, "3.3V Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 128")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){BPM:$(NO)}Pwr:V3_3I_DB0-I") {
+    field(DESC, "3.3V Current")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 132")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+
+####  DB1 Voltages and Currents
+
+record(ai, "$(P){BPM:$(NO)}Pwr:P12V_DB1-I") {
+    field(DESC, "+12V DB1 Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 136")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){BPM:$(NO)}Pwr:P12I_DB1-I") {
+    field(DESC, "+12V DB1 Current")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 140")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+
+record(ai, "$(P){BPM:$(NO)}Pwr:N12V_DB1-I") {
+    field(DESC, "-12V DB1 Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 144")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+
+record(ai, "$(P){BPM:$(NO)}Pwr:V3_3V_DB1-I") {
+    field(DESC, "3.3V Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 148")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){BPM:$(NO)}Pwr:V3_3I_DB1-I") {
+    field(DESC, "3.3V Current")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 152")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+
+record(ai, "$(P){BPM:$(NO)}Pwr:N12V-I") {
+    field(DESC, "0.9V MGT Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 156")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(HIHI,"-13")
+    field(LOLO,"-11")
+    field(HIGH,"-12.5")
+    field(LOW,"-11.5")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+
+
+
+record(ai, "$(P){BPM:$(NO)}Temp:RegSense1-I") {
+    field(DESC, "Regulator Temp1 read")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 180")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(EGU,  "C")
+    field(HIHI,"70")
+    field(LOLO,"-0.5")
+    field(HIGH,"60")
+    field(LOW,"10")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+
+record(ai, "$(P){BPM:$(NO)}Temp:RegSense2-I") {
+    field(DESC, "Regulator Temp2 read")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 184")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(EGU,  "C")
+    field(HIHI,"70")
+    field(LOLO,"-0.5")
+    field(HIGH,"60")
+    field(LOW,"10")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+
+record(ai, "$(P){BPM:$(NO)}Temp:RegSense3-I") {
+    field(DESC, "Regulator Temp3 read")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 188")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(EGU,  "C")
+    field(HIHI,"70")
+    field(LOLO,"-0.5")
+    field(HIGH,"60")
+    field(LOW,"10")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+
+
+record(ai, "$(P){BPM:$(NO)}Temp:RegSense4-I") {
+    field(DESC, "Regulator Temp4 read")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 192")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(EGU,  "C")
+    field(HIHI,"70")
+    field(LOLO,"-0.5")
+    field(HIGH,"60")
+    field(LOW,"10")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+
+record(ai, "$(P){BPM:$(NO)}Temp:FpgaPL-I") {
+    field(DESC, "FPGA Die Temperature")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 196")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(EGU,  "C")
+    field(HIHI,"60")
+    field(LOLO,"10")
+    field(HIGH,"50")
+    field(LOW,"10")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+
+
+record(ai, "$(P){BPM:$(NO)}Temp:FpgaPS-I") {
+    field(DESC, "FPGA Die Temperature")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 200")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(EGU,  "C")
+    field(HIHI,"60")
+    field(LOLO,"10")
+    field(HIGH,"50")
+    field(LOW,"10")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+
+record(longin, "$(P){BPM:$(NO)}Sys:Uptime-I") {
+    field(DESC, "System Uptime in sec")
+    field(DTYP, "PSC Reg")
+    field(INP , "@chp_stat_rx_$(NO) 32 204")
+    field(SCAN,"I/O Intr")
+    field(EGU,  "sec")
+}
+
+
+####### Frequency Readbacks ################
+
+record(longin, "$(P){BPM:$(NO)}Freq:DPLL-I") {
+    field(DESC, "Frequency Readback")
+    field(DTYP, "PSC Reg")
+    field(INP , "@chp_stat_rx_$(NO) 32 212")
+    field(SCAN,"I/O Intr")
+    field(EGU,  "MHz")
+}
+
+record(longin, "$(P){BPM:$(NO)}Freq:APLL-I") {
+    field(DESC, "Frequency Readback")
+    field(DTYP, "PSC Reg")
+    field(INP , "@chp_stat_rx_$(NO) 32 216")
+    field(SCAN,"I/O Intr")
+    field(EGU,  "MHz")
+}
+
+record(longin, "$(P){BPM:$(NO)}Freq:EXTCLK-I") {
+    field(DESC, "Frequency Readback")
+    field(DTYP, "PSC Reg")
+    field(INP , "@chp_stat_rx_$(NO) 32 220")
+    field(SCAN,"I/O Intr")
+    field(EGU,  "MHz")
+}
+
+record(longin, "$(P){BPM:$(NO)}Freq:BSYNC0-I") {
+    field(DESC, "Frequency Readback")
+    field(DTYP, "PSC Reg")
+    field(INP , "@chp_stat_rx_$(NO) 32 224")
+    field(SCAN,"I/O Intr")
+    field(EGU,  "MHz")
+}
+
+record(longin, "$(P){BPM:$(NO)}Freq:BSYNC1-I") {
+    field(DESC, "Frequency Readback")
+    field(DTYP, "PSC Reg")
+    field(INP , "@chp_stat_rx_$(NO) 32 228")
+    field(SCAN,"I/O Intr")
+    field(EGU,  "MHz")
+}
+
+record(longin, "$(P){BPM:$(NO)}Freq:DAC-I") {
+    field(DESC, "Frequency Readback")
+    field(DTYP, "PSC Reg")
+    field(INP , "@chp_stat_rx_$(NO) 32 232")
+    field(SCAN,"I/O Intr")
+    field(EGU,  "MHz")
+}
+
+record(longin, "$(P){BPM:$(NO)}Freq:BUS-I") {
+    field(DESC, "Frequency Readback")
+    field(DTYP, "PSC Reg")
+    field(INP , "@chp_stat_rx_$(NO) 32 236")
+    field(SCAN,"I/O Intr")
+    field(EGU,  "MHz")
+}
+
+
+
+
+
+record(ai, "$(P){BPM:$(NO)}Temp:PwrMgmt-I") {
+    field(DESC, "LTC2977 Pwr Mgmt Chip Temperature")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@chp_stat_rx_$(NO) 32 280")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+    field(EGU,  "C")
+    field(HIHI,"60")
+    field(LOLO,"-0.5")
+    field(HIGH,"50")
+    field(LOW,"10")
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LLSV,"INVALID")
+    field(LSV,"MINOR")
+}
+
+

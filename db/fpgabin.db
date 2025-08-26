@@ -1,0 +1,136 @@
+
+
+
+record(bo, "$(P){CPC:$(NO)}DB0:BinFile-Read") {
+    field(DESC, "Read FPGA Bin File in aSub")
+    field(DTYP, "Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(VAL, "0")
+    field(FLNK, "$(P){CPC:$(NO)}DB0:BinFile-ReadSend")
+    #field(HIGH,".5")    #500 ms after low   
+}
+
+record(bo, "$(P){CPC:$(NO)}DB1:BinFile-Read") {
+    field(DESC, "Read FPGA Bin File in aSub")
+    field(DTYP, "Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(VAL, "0")
+    field(FLNK, "$(P){CPC:$(NO)}DB1:BinFile-ReadSend")
+    #field(HIGH,".5")    #500 ms after low   
+}
+
+
+record(stringin, "$(P){CPC:$(NO)}DB0:BinFile-FilePath") {
+    field(DESC, "File path")
+    field(VAL, "/home/mead/eic/sfp_db")      # default value
+}
+
+record(stringin, "$(P){CPC:$(NO)}DB1:BinFile-FilePath") {
+    field(DESC, "File path")
+    field(VAL, "/home/mead/eic/sfp_db")      # default value
+}
+
+
+
+record(stringin, "$(P){CPC:$(NO)}DB0:BinFile-FileName") {
+    field(DESC, "File name")
+    field(VAL, "cpd.bin")  # default value  
+}
+
+record(stringin, "$(P){CPC:$(NO)}DB1:BinFile-FileName") {
+    field(DESC, "File name")
+    field(VAL, "cpd.bin")  # default value  
+}
+
+record(longout, "$(P){CPC:$(NO)}BinFile-Offset") {
+    field(DESC, "Current file read offset (bytes)")
+    field(VAL, "0")
+    field(DTYP, "Soft Channel")
+}
+
+
+record(aSub, "$(P){CPC:$(NO)}DB0:BinFile-ReadSend") {
+    field(DESC, "Read and send binary file over TCP")
+    field(INPA, "$(P){CPC:$(NO)}DB0:BinFile-FilePath PP")      # directory path (string)
+    field(INPB, "$(P){CPC:$(NO)}DB0:BinFile-FileName PP")      # filename (string)
+    field(INPC, "$(P){CPC:$(NO)}Sys-IPAddrStr-I SP")       # IP address string (e.g. "10.0.142.116")
+    field(INPD, "0")
+    field(FTA, STRING)
+    field(FTB, STRING)
+    field(FTC, STRING)
+    field(FTD, LONG)
+    field(FTVA, LONG)                                      # output array type (int32_t)
+    field(NOVA, "500000")                                   # output array size (BLOCK_SIZE_BYTES/4)
+    field(NEVA, "0")                                       # number actually sent (output)
+    field(SCAN, "Passive")
+    field(SNAM, "readSendBinFile")                         # C function name
+    #field(OUTA, "$(P){CPC:$(NO)}BinFile-Wfm PP MS")        # output waveform (int32_t array)
+    field(OUTA, "$(P){CPC:$(NO)}BinFileLen-SP PP MS")      # longout for number sent
+}
+
+
+record(aSub, "$(P){CPC:$(NO)}DB1:BinFile-ReadSend") {
+    field(DESC, "Read and send binary file over TCP")
+    field(INPA, "$(P){CPC:$(NO)}DB1:BinFile-FilePath PP")      # directory path (string)
+    field(INPB, "$(P){CPC:$(NO)}DB1:BinFile-FileName PP")      # filename (string)
+    field(INPC, "$(P){CPC:$(NO)}Sys-IPAddrStr-I SP")       # IP address string (e.g. "10.0.142.116")
+    field(INPD, "1")
+    field(FTA, STRING)
+    field(FTB, STRING)
+    field(FTC, STRING)
+    field(FTD, LONG)
+    field(FTVA, LONG)                                      # output array type (int32_t)
+    field(NOVA, "500000")                                   # output array size (BLOCK_SIZE_BYTES/4)
+    field(NEVA, "0")                                       # number actually sent (output)
+    field(SCAN, "Passive")
+    field(SNAM, "readSendBinFile")                         # C function name
+    #field(OUTA, "$(P){CPC:$(NO)}BinFile-Wfm PP MS")        # output waveform (int32_t array)
+    field(OUTA, "$(P){CPC:$(NO)}BinFileLen-SP PP MS")      # longout for number sent
+}
+
+
+
+
+
+#record(aSub, "$(P){CPC:$(NO)}BinFile-ReadFile") {
+#    field(DESC, "Read binary file chunk")
+#    field(INPA, "$(P){CPC:$(NO)}BinFile-FilePath PP")       # directory path (string)
+#    field(INPB, "$(P){CPC:$(NO)}BinFile-FileName PP")       # filename (string)
+#    field(INPC, "50000")                                    # max elements to read per chunk (e.g. 50,000)
+#    field(INPD, "$(P){CPC:$(NO)}BinFile-Offset SP")         # offset in bytes (long)
+#    field(FTA, STRING)
+#    field(FTB, STRING)
+#    field(FTC, LONG)
+#    field(FTD, LONG)
+#    field(FTVA, LONG)
+#    field(FTVB, LONG)
+#    field(NOVA, "50000")                                    # max elements (output array size)
+#    field(NEVA, "0")                                        # number of elements read (output)
+#    field(SCAN, "Passive")
+#    field(SNAM, "readBinFile")                              # your C function name
+#    field(OUTA, "$(P){CPC:$(NO)}BinFile-Wfm PP MS")         # output waveform (block output)
+#    field(OUTB, "$(P){CPC:$(NO)}BinFileLen-SP PP MS")       # number of elements read (as longout)
+#    field(FLNK, "$(P){CPC:$(NO)}BinFile-IncrementOffset.PROC")
+#}
+
+
+#record(longout, "$(P){CPC:$(NO)}BinFileLen-SP") {
+#    field(DESC, "FPGA BinFile Length ")
+#    field(DTYP, "PSC Single I32")
+#    field(OUT , "@cpc$(NO) 12")
+#    field(FLNK, "$(P){CPC:$(NO)}GoRegSingleWrite0")
+#}
+
+
+
+
+record(waveform, "$(P){CPC:$(NO)}BinFile-Wfm") {
+    field(DESC, "Buffer to PSC")
+    field(DTYP, "PSC Block I32 Out")
+    field(INP , "@cpc$(NO) 11")   
+    field(FTVL, "DOUBLE")
+    field(NELM, "200000")
+    field(FLNK, "$(P){CPC:$(NO)}send")
+}

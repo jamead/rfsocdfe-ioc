@@ -1,0 +1,623 @@
+
+ 
+
+############# board stats (MSG ID 102) #########################
+
+
+record(longin, "$(P){CPC:$(NO)}GitHash-I") {
+    field(DESC, "Firmware Version")
+    field(DTYP, "PSC Reg")
+    field(INP , "@cpc$(NO) 102 0")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Sys-BrdTemp0-I") {
+    field(DESC, "System Temperature")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 4")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Sys-BrdTemp1-I") {
+    field(DESC, "System Temperature")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 8")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Sys-BrdTemp2-I") {
+    field(DESC, "System Temperature")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 12")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Sys-BrdTemp3-I") {
+    field(DESC, "System Temperature")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 16")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Sys-fpgapsTemp-I") {
+    field(DESC, "System Temperature")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 20")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Sys-fpgaplTemp-I") {
+    field(DESC, "System Temperature")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 24")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Sys-RegTemp0-I") {
+    field(DESC, "System Temperature")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 28")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Sys-RegTemp1-I") {
+    field(DESC, "System Temperature")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 32")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Sys-RegTemp2-I") {
+    field(DESC, "System Temperature")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 36")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Sys-RegTemp3-I") {
+    field(DESC, "System Temperature")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 40")
+    field(SCAN,"I/O Intr")
+}
+
+
+
+
+record(ai, "$(P){CPC:$(NO)}Pwr:VinV-I") {
+    field(DESC, "Input Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 60")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Pwr:VinI-I") {
+    field(DESC, "Input Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 64")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Pwr:N12V-I") {
+    field(DESC, "0.9V MGT Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 68")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+
+record(ai, "$(P){CPC:$(NO)}Pwr:V6V-I") {
+    field(DESC, "0.9V MGT Current")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 72")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+
+record(ai, "$(P){CPC:$(NO)}Pwr:V3_3V-I") {
+    field(DESC, "3.3V Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 76")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Pwr:V3_3I-I") {
+    field(DESC, "3.3V Current")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 80")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Pwr:V2_5V-I") {
+    field(DESC, "2.5V Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 84")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Pwr:V2_5I-I") {
+    field(DESC, "2.5V Current")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 88")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Pwr:V1_8V-I") {
+    field(DESC, "1.8V Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 92")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Pwr:V1_8I-I") {
+    field(DESC, "1.8V Current")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 96")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+
+
+record(ai, "$(P){CPC:$(NO)}Pwr:V1_2DDRV-I") {
+    field(DESC, "1.2V DDR Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 100")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Pwr:V1_2DDRI-I") {
+    field(DESC, "1.2V DDR Current")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 104")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Pwr:V0_85V-I") {
+    field(DESC, "0.85V DDR Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 108")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+
+record(ai, "$(P){CPC:$(NO)}Pwr:V0_85I-I") {
+    field(DESC, "1.8V Current")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 112")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Pwr:V2_5MGTV-I") {
+    field(DESC, "0.85V Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 116")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Pwr:V2_5MGTI-I") {
+    field(DESC, "0.85V Current")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 120")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+
+record(ai, "$(P){CPC:$(NO)}Pwr:V1_2MGTV-I") {
+    field(DESC, "1.2V MGT Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 124")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Pwr:V1_2MGTI-I") {
+    field(DESC, "1.2V MGT Current")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 128")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Pwr:V0_9MGTV-I") {
+    field(DESC, "0.9V MGT Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 132")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Pwr:V0_9MGTI-I") {
+    field(DESC, "0.9V MGT Current")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 136")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+
+
+
+####  DB0 Voltages and Currents
+
+record(ai, "$(P){CPC:$(NO)}Pwr:P12V_DB0-I") {
+    field(DESC, "+12V DB0 Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 140")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+
+record(ai, "$(P){CPC:$(NO)}Pwr:P12I_DB0-I") {
+    field(DESC, "+12V DB0 Current")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 144")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+
+record(ai, "$(P){CPC:$(NO)}Pwr:N12V_DB0-I") {
+    field(DESC, "-12V DB0 Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 148")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+
+record(ai, "$(P){CPC:$(NO)}Pwr:V3_3V_DB0-I") {
+    field(DESC, "3.3V Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 152")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Pwr:V3_3I_DB0-I") {
+    field(DESC, "3.3V Current")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 156")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+
+####  DB1 Voltages and Currents
+
+record(ai, "$(P){CPC:$(NO)}Pwr:P12V_DB1-I") {
+    field(DESC, "+12V DB1 Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 160")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Pwr:P12I_DB1-I") {
+    field(DESC, "+12V DB1 Current")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 164")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+
+record(ai, "$(P){CPC:$(NO)}Pwr:N12V_DB1-I") {
+    field(DESC, "-12V DB1 Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 168")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+
+record(ai, "$(P){CPC:$(NO)}Pwr:V3_3V_DB1-I") {
+    field(DESC, "3.3V Voltage")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 172")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Pwr:V3_3I_DB1-I") {
+    field(DESC, "3.3V Current")
+    field(DTYP, "PSC Reg F32")
+    field(INP , "@cpc$(NO) 102 176")
+    field(LINR,"LINEAR")
+    field(PREC,"3")
+    field(SCAN,"I/O Intr")
+}
+
+
+####### Frequency Readbacks ################
+
+record(longin, "$(P){CPC:$(NO)}Freq:DPLL-I") {
+    field(DESC, "Frequency Readback")
+    field(DTYP, "PSC Reg")
+    field(INP , "@cpc$(NO) 102 180")
+    field(SCAN,"I/O Intr")
+}
+
+record(longin, "$(P){CPC:$(NO)}Freq:APLL-I") {
+    field(DESC, "Frequency Readback")
+    field(DTYP, "PSC Reg")
+    field(INP , "@cpc$(NO) 102 184")
+    field(SCAN,"I/O Intr")
+}
+
+record(longin, "$(P){CPC:$(NO)}Freq:EXTCLK-I") {
+    field(DESC, "Frequency Readback")
+    field(DTYP, "PSC Reg")
+    field(INP , "@cpc$(NO) 102 188")
+    field(SCAN,"I/O Intr")
+}
+
+record(longin, "$(P){CPC:$(NO)}Freq:BSYNC0-I") {
+    field(DESC, "Frequency Readback")
+    field(DTYP, "PSC Reg")
+    field(INP , "@cpc$(NO) 102 192")
+    field(SCAN,"I/O Intr")
+}
+
+record(longin, "$(P){CPC:$(NO)}Freq:BSYNC1-I") {
+    field(DESC, "Frequency Readback")
+    field(DTYP, "PSC Reg")
+    field(INP , "@cpc$(NO) 102 196")
+    field(SCAN,"I/O Intr")
+}
+
+record(longin, "$(P){CPC:$(NO)}Freq:DAC-I") {
+    field(DESC, "Frequency Readback")
+    field(DTYP, "PSC Reg")
+    field(INP , "@cpc$(NO) 102 200")
+    field(SCAN,"I/O Intr")
+}
+
+record(longin, "$(P){CPC:$(NO)}Freq:BUS-I") {
+    field(DESC, "Frequency Readback")
+    field(DTYP, "PSC Reg")
+    field(INP , "@cpc$(NO) 102 204")
+    field(SCAN,"I/O Intr")
+}
+
+
+####### Fan Tray Readbacks ################
+
+record(ai, "$(P){CPC:$(NO)}Fan:Tach0-I") {
+    field(DESC, "Fan Tachometer")
+    field(DTYP, "PSC Reg")
+    field(INP , "@cpc$(NO) 102 208")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Fan:Tach1-I") {
+    field(DESC, "Fan Tachometer")
+    field(DTYP, "PSC Reg")
+    field(INP , "@cpc$(NO) 102 212")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Fan:Tach2-I") {
+    field(DESC, "Fan Tachometer")
+    field(DTYP, "PSC Reg")
+    field(INP , "@cpc$(NO) 102 216")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Fan:Tach3-I") {
+    field(DESC, "Fan Tachometer")
+    field(DTYP, "PSC Reg")
+    field(INP , "@cpc$(NO) 102 220")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Fan:Tach4-I") {
+    field(DESC, "Fan Tachometer")
+    field(DTYP, "PSC Reg")
+    field(INP , "@cpc$(NO) 102 224")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Fan:Tach5-I") {
+    field(DESC, "Fan Tachometer")
+    field(DTYP, "PSC Reg")
+    field(INP , "@cpc$(NO) 102 228")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Fan:Temp0-I") {
+    field(DESC, "Fan Temperature")
+    field(DTYP, "PSC Reg F32")
+    field(PREC,"2")
+    field(INP , "@cpc$(NO) 102 232")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Fan:Temp1-I") {
+    field(DESC, "Fan Temperature")
+    field(DTYP, "PSC Reg F32")
+    field(PREC,"2")
+    field(INP , "@cpc$(NO) 102 236")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Fan:Temp2-I") {
+    field(DESC, "Fan Temperature")
+    field(DTYP, "PSC Reg F32")
+    field(PREC,"2")
+    field(INP , "@cpc$(NO) 102 240")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Fan:Temp3-I") {
+    field(DESC, "Fan Temperature")
+    field(DTYP, "PSC Reg F32")
+    field(PREC,"2")
+    field(INP , "@cpc$(NO) 102 244")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Fan:Temp4-I") {
+    field(DESC, "Fan Temperature")
+    field(DTYP, "PSC Reg F32")
+    field(PREC,"2")
+    field(INP , "@cpc$(NO) 102 248")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Fan:Temp5-I") {
+    field(DESC, "Fan Temperature")
+    field(DTYP, "PSC Reg F32")
+    field(PREC,"2")
+    field(INP , "@cpc$(NO) 102 252")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Fan:DutyCycle0-I") {
+    field(DESC, "Fan Duty Cycle")
+    field(DTYP, "PSC Reg")
+    field(INP , "@cpc$(NO) 102 256")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Fan:DutyCycle1-I") {
+    field(DESC, "Fan Duty Cycle")
+    field(DTYP, "PSC Reg")
+    field(INP , "@cpc$(NO) 102 260")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Fan:DutyCycle2-I") {
+    field(DESC, "Fan Duty Cycle")
+    field(DTYP, "PSC Reg")
+    field(INP , "@cpc$(NO) 102 264")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Fan:DutyCycle3-I") {
+    field(DESC, "Fan Duty Cycle")
+    field(DTYP, "PSC Reg")
+    field(INP , "@cpc$(NO) 102 268")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Fan:DutyCycle4-I") {
+    field(DESC, "Fan Duty Cycle")
+    field(DTYP, "PSC Reg")
+    field(INP , "@cpc$(NO) 102 272")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}Fan:DutyCycle5-I") {
+    field(DESC, "Fan Duty Cycle")
+    field(DTYP, "PSC Reg")
+    field(INP , "@cpc$(NO) 102 276")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}DB0:Present-I") {
+    field(DESC, "Daughter board installed")
+    field(DTYP, "PSC Reg")
+    field(INP , "@cpc$(NO) 102 280")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}DB1:Present-I") {
+    field(DESC, "Daughter board installed")
+    field(DTYP, "PSC Reg")
+    field(INP , "@cpc$(NO) 102 284")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}DB0:C2CLinkStat-I") {
+    field(DESC, "Chip2Chip Link Status")
+    field(DTYP, "PSC Reg")
+    field(INP , "@cpc$(NO) 102 288")
+    field(SCAN,"I/O Intr")
+}
+
+record(ai, "$(P){CPC:$(NO)}DB1:C2CLinkStat-I") {
+    field(DESC, "Chip2Chip Link Status")
+    field(DTYP, "PSC Reg")
+    field(INP , "@cpc$(NO) 102 292")
+    field(SCAN,"I/O Intr")
+}
+
+
+#record(bi, "$(P){CPC:$(NO)}DB0:Present-I") {
+#    field(DESC, "DB0 Present")
+#    field(DTYP, "PSC Reg")
+#    field(INP , "@cpc$(NO) 102 280")
+#    field(MASK, "0x1")
+#    field(SCAN,"I/O Intr")
+#    field(ZNAM,"Present")
+#    field(ONAM,"Not Installed")
+#    #field(ZSV,"NO_ALARM")
+#    #field(OSV,"MAJOR")
+#}
+
+#record(bi, "$(P){CPC:$(NO)}DB1:Present-I") {
+#    field(DESC, "DB0 Present")
+#    field(DTYP, "PSC Reg")
+#    field(INP , "@cpc$(NO) 102 284")
+#    field(MASK, "0x1")
+#    field(SCAN,"I/O Intr")
+#    field(ZNAM,"Present")
+#    field(ONAM,"Not Installed")
+#    #field(ZSV,"NO_ALARM")
+#    #field(OSV,"MAJOR")
+#}
+
+
+
+
+
+
+
+
+
