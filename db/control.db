@@ -5,24 +5,24 @@
 #############################################################
 
 
-record(bo, "$(P){CPC:$(NO)}wfm-RECONNECT") {
+record(bo, "$(P){RFDFE:$(NO)}wfm-RECONNECT") {
     field(DTYP, "PSC Ctrl Reconnect")
-    field(OUT , "@cpc$(NO)")
+    field(OUT , "@psc$(NO)")
     field(ZNAM, "Wfm Reconnect")
     field(ONAM, "Wfm Reconnect")
 }
 
 
-record(bo, "$(P){CPC:$(NO)}TX-RECONNECT") {
+record(bo, "$(P){RFDFE:$(NO)}TX-RECONNECT") {
     field(DTYP, "PSC Ctrl Reconnect")
-    field(OUT , "@cpc$(NO)")
+    field(OUT , "@psc$(NO)")
     field(ZNAM, "Ctrl Reconnect")
     field(ONAM, "Ctrl Reconnect")
 }
 
-record(bo, "$(P){CPC:$(NO)}RX10Hz-RECONNECT") {
+record(bo, "$(P){RFDFE:$(NO)}RX10Hz-RECONNECT") {
     field(DTYP, "PSC Ctrl Reconnect")
-    field(OUT , "@cpc$(NO)")
+    field(OUT , "@psc$(NO)")
     field(ZNAM, "10Hz Rx Reconnect")
     field(ONAM, "10Hz Rx Reconnect")
 }
@@ -30,136 +30,87 @@ record(bo, "$(P){CPC:$(NO)}RX10Hz-RECONNECT") {
 
 
 # Flush reg to socket buffer, trigger send to send all socket buffer to PSC 
-record(bo, "$(P){CPC:$(NO)}send") { 
+record(bo, "$(P){RFDFE:$(NO)}send") { 
     field(DTYP, "PSC Ctrl Send All") 
-    field(OUT , "@cpc$(NO)") 
+    field(OUT , "@psc$(NO)") 
     field(ZNAM, "Send") 
     field(ONAM, "Send") 
 } 
  
 # Write a single register
-record(longout, "$(P){CPC:$(NO)}GoRegSingleWrite") {
+record(longout, "$(P){RFDFE:$(NO)}GoRegSingleWrite") {
     field(DTYP, "PSC Ctrl Send")
-    field(OUT , "@cpc$(NO)")
+    field(OUT , "@psc$(NO)")
     field(VAL , "1") 
-    field(FLNK, "$(P){CPC:$(NO)}send")
+    field(FLNK, "$(P){RFDFE:$(NO)}send")
 }
 
 # Write a single register
-record(longout, "$(P){CPC:$(NO)}GoRegSingleWrite0") {
+record(longout, "$(P){RFDFE:$(NO)}GoRegSingleWrite0") {
     field(DTYP, "PSC Ctrl Send")
-    field(OUT , "@cpc$(NO)")
+    field(OUT , "@psc$(NO)")
     field(VAL , "0") 
-    field(FLNK, "$(P){CPC:$(NO)}send")
+    field(FLNK, "$(P){RFDFE:$(NO)}send")
 }
  
 # Write a single register
-record(longout, "$(P){CPC:$(NO)}GoRegSingleWrite1") {
+record(longout, "$(P){RFDFE:$(NO)}GoRegSingleWrite1") {
     field(DTYP, "PSC Ctrl Send")
-    field(OUT , "@cpc$(NO)")
+    field(OUT , "@psc$(NO)")
     field(VAL , "1") 
-    field(FLNK, "$(P){CPC:$(NO)}send")
+    field(FLNK, "$(P){RFDFE:$(NO)}send")
 }
 
 # Write a single register
-record(longout, "$(P){CPC:$(NO)}GoRegSingleWrite2") {
+record(longout, "$(P){RFDFE:$(NO)}GoRegSingleWrite2") {
     field(DTYP, "PSC Ctrl Send")
-    field(OUT , "@cpc$(NO)")
+    field(OUT , "@psc$(NO)")
     field(VAL , "2") 
-    field(FLNK, "$(P){CPC:$(NO)}send")
+    field(FLNK, "$(P){RFDFE:$(NO)}send")
 }
 
 # Write a single register
-record(longout, "$(P){CPC:$(NO)}GoRegSingleWrite5") {
+record(longout, "$(P){RFDFE:$(NO)}GoRegSingleWrite5") {
     field(DTYP, "PSC Ctrl Send")
-    field(OUT , "@cpc$(NO)")
+    field(OUT , "@psc$(NO)")
     field(VAL , "5") 
-    field(FLNK, "$(P){CPC:$(NO)}send")
+    field(FLNK, "$(P){RFDFE:$(NO)}send")
 }
 
 
 ############# Control PV's ##########################################
 
-record(bo, "$(P){CPC:$(NO)}KeepAlive-SP") {
+record(bo, "$(P){RFDFE:$(NO)}KeepAlive-SP") {
     field(DESC, "Keeps the socket active")
     field(DTYP, "PSC Single U32")
-    field(OUT , "@cpc$(NO) 5 100")
+    field(OUT , "@psc$(NO) 5 100")
     field(SCAN, "1 second")
-    field(FLNK, "$(P){CPC:$(NO)}GoRegSingleWrite5")
+    field(FLNK, "$(P){RFDFE:$(NO)}GoRegSingleWrite5")
 }
-
-
 
 
 # TOP FP LED
-record(bo, "$(P){CPC:$(NO)}FPLedTop-SP") {
+record(bo, "$(P){RFDFE:$(NO)}FPLedTop-SP") {
     field(DESC, "Top FP LED")
     field(DTYP, "PSC Single U32")
-    field(OUT , "@cpc$(NO) 0 0")
+    field(OUT , "@psc$(NO) 0 0")
     field(ZNAM,"Off")
     field(ONAM,"On")
-    field(FLNK, "$(P){CPC:$(NO)}GoRegSingleWrite0")
+    field(FLNK, "$(P){RFDFE:$(NO)}GoRegSingleWrite0")
 }
 
 # BOT FP LED
-record(bo, "$(P){CPC:$(NO)}FPLedBot-SP") {
+record(bo, "$(P){RFDFE:$(NO)}FPLedBot-SP") {
     field(DESC, "Bot FP LED")
     field(DTYP, "PSC Single U32")
-    field(OUT , "@cpc$(NO) 0 4")
+    field(OUT , "@psc$(NO) 0 4")
     field(ZNAM,"Off")
     field(ONAM,"On")
-    field(FLNK, "$(P){CPC:$(NO)}GoRegSingleWrite0")
+    field(FLNK, "$(P){RFDFE:$(NO)}GoRegSingleWrite0")
 }
 
 
-record(longout, "$(P){CPC:$(NO)}Fan:DutyCycle0-SP") {
-    field(DESC, "Fan Duty Cycle Control")
-    field(DTYP, "PSC Single I32")
-    field(OUT , "@cpc$(NO) 0 8")
-    field(FLNK, "$(P){CPC:$(NO)}GoRegSingleWrite0")
-}
 
-record(longout, "$(P){CPC:$(NO)}Fan:DutyCycle1-SP") {
-    field(DESC, "Fan Duty Cycle Control")
-    field(DTYP, "PSC Single I32")
-    field(OUT , "@cpc$(NO) 0 12")
-    field(FLNK, "$(P){CPC:$(NO)}GoRegSingleWrite0")
-}
-
-record(longout, "$(P){CPC:$(NO)}Fan:DutyCycle2-SP") {
-    field(DESC, "Fan Duty Cycle Control")
-    field(DTYP, "PSC Single I32")
-    field(OUT , "@cpc$(NO) 0 16")
-    field(FLNK, "$(P){CPC:$(NO)}GoRegSingleWrite0")
-}
-
-record(longout, "$(P){CPC:$(NO)}Fan:DutyCycle3-SP") {
-    field(DESC, "Fan Duty Cycle Control")
-    field(DTYP, "PSC Single I32")
-    field(OUT , "@cpc$(NO) 0 20")
-    field(FLNK, "$(P){CPC:$(NO)}GoRegSingleWrite0")
-}
-
-record(longout, "$(P){CPC:$(NO)}Fan:DutyCycle4-SP") {
-    field(DESC, "Fan Duty Cycle Control")
-    field(DTYP, "PSC Single I32")
-    field(OUT , "@cpc$(NO) 0 24")
-    field(FLNK, "$(P){CPC:$(NO)}GoRegSingleWrite0")
-}
-
-record(longout, "$(P){CPC:$(NO)}Fan:DutyCycle5-SP") {
-    field(DESC, "Fan Duty Cycle Control")
-    field(DTYP, "PSC Single I32")
-    field(OUT , "@cpc$(NO) 0 28")
-    field(FLNK, "$(P){CPC:$(NO)}GoRegSingleWrite0")
-}
-
-record(longout, "$(P){CPC:$(NO)}DB0:Reg0-SP") {
-    field(DESC, "DB0 Reg0")
-    field(DTYP, "PSC Single I32")
-    field(OUT , "@cpc$(NO) 0 50")
-    field(FLNK, "$(P){CPC:$(NO)}GoRegSingleWrite0")
-}
 
 
 
