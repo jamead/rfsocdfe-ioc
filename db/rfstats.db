@@ -1,0 +1,43 @@
+
+ 
+
+############# RF stats (MSG ID 104) #########################
+
+
+
+record(longin, "$(P){RFDFE:$(NO)}Freq-PS-I") {
+    field(DESC, "Measured clock frequency")
+    field(DTYP, "PSC Reg")
+    field(INP , "@psc$(NO) 104 0")
+    field(SCAN,"I/O Intr")
+}
+
+
+record(longin, "$(P){RFDFE:$(NO)}Freq-LMKClkIn-I") {
+    field(DESC, "Measured clock frequency")
+    field(DTYP, "PSC Reg")
+    field(INP , "@psc$(NO) 104 4")
+    field(SCAN,"I/O Intr")
+}
+
+record(longin, "$(P){RFDFE:$(NO)}Freq-LMKClkOut-I") {
+    field(DESC, "Measured clock frequency")
+    field(DTYP, "PSC Reg")
+    field(INP , "@psc$(NO) 104 8")
+    field(SCAN,"I/O Intr")
+}
+
+record(longin, "$(P){RFDFE:$(NO)}Freq-RFADCOut-I") {
+    field(DESC, "Measured clock frequency")
+    field(DTYP, "PSC Reg")
+    field(INP , "@psc$(NO) 104 12")
+    field(SCAN,"I/O Intr")
+}
+
+record(longin, "$(P){RFDFE:$(NO)}Freq-RFADCAxis-I") {
+    field(DESC, "Measured clock frequency")
+    field(DTYP, "PSC Reg")
+    field(INP , "@psc$(NO) 104 16")
+    field(SCAN,"I/O Intr")
+}
+

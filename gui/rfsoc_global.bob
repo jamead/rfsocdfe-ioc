@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-08-27 08:20:37 by mead-->
+<!--Saved on 2025-08-30 12:13:53 by mead-->
 <display version="2.0.0">
   <name>$(PriSys):$(PSC)</name>
   <width>860</width>
@@ -1350,7 +1350,7 @@ $(pv_value)</tooltip>
     <transparent>true</transparent>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_314</name>
-      <pv_name>$(P){RFDFE:$(N)}Freq:DPLL-I</pv_name>
+      <pv_name>$(P){RFDFE:$(N)}Freq-PS-I</pv_name>
       <x>149</x>
       <y>5</y>
       <width>75</width>
@@ -1358,6 +1358,7 @@ $(pv_value)</tooltip>
         <color name="Background" red="255" green="255" blue="255">
         </color>
       </background_color>
+      <precision>6</precision>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
       <wrap_words>false</wrap_words>
@@ -1370,7 +1371,7 @@ $(pv_value)</tooltip>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_206</name>
-      <text>DPLL</text>
+      <text>PS</text>
       <x>49</x>
       <y>5</y>
       <width>96</width>
@@ -1385,7 +1386,7 @@ $(pv_value)</tooltip>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_315</name>
-      <pv_name>$(P){RFDFE:$(N)}Freq:APLL-I</pv_name>
+      <pv_name>$(P){RFDFE:$(N)}Freq-LMKClkIn-I</pv_name>
       <x>149</x>
       <y>27</y>
       <width>75</width>
@@ -1393,6 +1394,7 @@ $(pv_value)</tooltip>
         <color name="Background" red="255" green="255" blue="255">
         </color>
       </background_color>
+      <precision>6</precision>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
       <wrap_words>false</wrap_words>
@@ -1405,7 +1407,7 @@ $(pv_value)</tooltip>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_208</name>
-      <text>APLL</text>
+      <text>LMK Clk In</text>
       <x>49</x>
       <y>27</y>
       <width>96</width>
@@ -1420,7 +1422,7 @@ $(pv_value)</tooltip>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_316</name>
-      <pv_name>$(P){RFDFE:$(N)}Freq:EXTCLK-I</pv_name>
+      <pv_name>$(P){RFDFE:$(N)}Freq-LMKClkOut-I</pv_name>
       <x>149</x>
       <y>49</y>
       <width>75</width>
@@ -1428,6 +1430,7 @@ $(pv_value)</tooltip>
         <color name="Background" red="255" green="255" blue="255">
         </color>
       </background_color>
+      <precision>6</precision>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
       <wrap_words>false</wrap_words>
@@ -1440,7 +1443,7 @@ $(pv_value)</tooltip>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_209</name>
-      <text>ExtClk</text>
+      <text>LMK Clk Out</text>
       <x>49</x>
       <y>50</y>
       <width>96</width>
@@ -1455,7 +1458,7 @@ $(pv_value)</tooltip>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_317</name>
-      <pv_name>$(P){RFDFE:$(N)}Freq:BSYNC0-I</pv_name>
+      <pv_name>$(P){RFDFE:$(N)}Freq-RFADCOut-I</pv_name>
       <x>149</x>
       <y>71</y>
       <width>75</width>
@@ -1463,6 +1466,7 @@ $(pv_value)</tooltip>
         <color name="Background" red="255" green="255" blue="255">
         </color>
       </background_color>
+      <precision>6</precision>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
       <wrap_words>false</wrap_words>
@@ -1475,7 +1479,7 @@ $(pv_value)</tooltip>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_210</name>
-      <text>Bsync0</text>
+      <text>RFADC Out</text>
       <x>49</x>
       <y>70</y>
       <width>96</width>
@@ -1490,7 +1494,7 @@ $(pv_value)</tooltip>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_318</name>
-      <pv_name>$(P){RFDFE:$(N)}Freq:BSYNC1-I</pv_name>
+      <pv_name>$(P){RFDFE:$(N)}Freq-RFADCAxis-I</pv_name>
       <x>149</x>
       <y>93</y>
       <width>75</width>
@@ -1498,6 +1502,7 @@ $(pv_value)</tooltip>
         <color name="Background" red="255" green="255" blue="255">
         </color>
       </background_color>
+      <precision>6</precision>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
       <wrap_words>false</wrap_words>
@@ -1510,79 +1515,9 @@ $(pv_value)</tooltip>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_211</name>
-      <text>Bsync1</text>
+      <text>RF Axis</text>
       <x>49</x>
       <y>91</y>
-      <width>96</width>
-      <horizontal_alignment>2</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <actions>
-      </actions>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_319</name>
-      <pv_name>$(P){RFDFE:$(N)}Freq:DAC-I</pv_name>
-      <x>149</x>
-      <y>115</y>
-      <width>75</width>
-      <background_color>
-        <color name="Background" red="255" green="255" blue="255">
-        </color>
-      </background_color>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-      <actions>
-      </actions>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_212</name>
-      <text>DAC</text>
-      <x>49</x>
-      <y>116</y>
-      <width>96</width>
-      <horizontal_alignment>2</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <actions>
-      </actions>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_320</name>
-      <pv_name>$(P){RFDFE:$(N)}Freq:BUS-I</pv_name>
-      <x>149</x>
-      <y>138</y>
-      <width>75</width>
-      <background_color>
-        <color name="Background" red="255" green="255" blue="255">
-        </color>
-      </background_color>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-      <actions>
-      </actions>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_213</name>
-      <text>PS</text>
-      <x>49</x>
-      <y>137</y>
       <width>96</width>
       <horizontal_alignment>2</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
