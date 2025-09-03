@@ -89,25 +89,16 @@ record(bo, "$(P){RFDFE:$(NO)}KeepAlive-SP") {
 }
 
 
-# TOP FP LED
-record(bo, "$(P){RFDFE:$(NO)}FPLedTop-SP") {
-    field(DESC, "Top FP LED")
+record(bo, "$(P){RFDFE:$(NO)}TrigADC-SP") {
+    field(DESC, "Trigger ADC write to FIFO")
     field(DTYP, "PSC Single U32")
-    field(OUT , "@psc$(NO) 0 0")
+    field(OUT , "@psc$(NO) 1 0")
     field(ZNAM,"Off")
     field(ONAM,"On")
     field(FLNK, "$(P){RFDFE:$(NO)}GoRegSingleWrite0")
 }
 
-# BOT FP LED
-record(bo, "$(P){RFDFE:$(NO)}FPLedBot-SP") {
-    field(DESC, "Bot FP LED")
-    field(DTYP, "PSC Single U32")
-    field(OUT , "@psc$(NO) 0 4")
-    field(ZNAM,"Off")
-    field(ONAM,"On")
-    field(FLNK, "$(P){RFDFE:$(NO)}GoRegSingleWrite0")
-}
+
 
 
 

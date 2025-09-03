@@ -5,39 +5,87 @@
 
 
 
-record(longin, "$(P){RFDFE:$(NO)}Freq-PS-I") {
+record(longin, "$(P){RFDFE:$(NO)}Freq-PS-IRAW") {
     field(DESC, "Measured clock frequency")
     field(DTYP, "PSC Reg")
     field(INP , "@psc$(NO) 104 0")
     field(SCAN,"I/O Intr")
+    field(FLNK,"$(P){RFDFE:$(NO)}Freq-PS-I")
 }
 
+record(calc, "$(P){RFDFE:$(NO)}Freq-PS-I") {
+    field(DESC, "Measured clock frequency (MHz)")
+    field(INPA,"$(P){RFDFE:$(NO)}Freq-PS-IRAW")
+    field(CALC,"A/1e6")
+    field(PREC,"6")
+}
 
-record(longin, "$(P){RFDFE:$(NO)}Freq-LMKClkIn-I") {
+record(longin, "$(P){RFDFE:$(NO)}Freq-LMKClkIn-IRAW") {
     field(DESC, "Measured clock frequency")
     field(DTYP, "PSC Reg")
     field(INP , "@psc$(NO) 104 4")
     field(SCAN,"I/O Intr")
+    field(FLNK,"$(P){RFDFE:$(NO)}Freq-LMKClkIn-I") 
 }
 
-record(longin, "$(P){RFDFE:$(NO)}Freq-LMKClkOut-I") {
+record(calc, "$(P){RFDFE:$(NO)}Freq-LMKClkIn-I") {
+    field(DESC, "Measured clock frequency (MHz)")
+    field(INPA,"$(P){RFDFE:$(NO)}Freq-LMKClkIn-IRAW")
+    field(CALC,"A/1e6")
+    field(PREC,"6")
+}
+
+
+record(longin, "$(P){RFDFE:$(NO)}Freq-LMKClkOut-IRAW") {
     field(DESC, "Measured clock frequency")
     field(DTYP, "PSC Reg")
     field(INP , "@psc$(NO) 104 8")
     field(SCAN,"I/O Intr")
+    field(FLNK,"$(P){RFDFE:$(NO)}Freq-LMKClkOut-I")     
 }
 
-record(longin, "$(P){RFDFE:$(NO)}Freq-RFADCOut-I") {
+record(calc, "$(P){RFDFE:$(NO)}Freq-LMKClkOut-I") {
+    field(DESC, "Measured clock frequency (MHz)")
+    field(INPA,"$(P){RFDFE:$(NO)}Freq-LMKClkOut-IRAW")
+    field(CALC,"A/1e6")
+    field(PREC,"6")
+}
+
+
+record(longin, "$(P){RFDFE:$(NO)}Freq-RFADCOut-IRAW") {
     field(DESC, "Measured clock frequency")
     field(DTYP, "PSC Reg")
     field(INP , "@psc$(NO) 104 12")
     field(SCAN,"I/O Intr")
+    field(FLNK,"$(P){RFDFE:$(NO)}Freq-RFADCOut-I")      
 }
 
-record(longin, "$(P){RFDFE:$(NO)}Freq-RFADCAxis-I") {
+record(calc, "$(P){RFDFE:$(NO)}Freq-RFADCOut-I") {
+    field(DESC, "Measured clock frequency (MHz)")
+    field(INPA,"$(P){RFDFE:$(NO)}Freq-RFADCOut-IRAW")
+    field(CALC,"A/1e6")
+    field(PREC,"6")
+}
+
+
+
+record(longin, "$(P){RFDFE:$(NO)}Freq-RFADCAxis-IRAW") {
     field(DESC, "Measured clock frequency")
     field(DTYP, "PSC Reg")
     field(INP , "@psc$(NO) 104 16")
     field(SCAN,"I/O Intr")
+    field(FLNK,"$(P){RFDFE:$(NO)}Freq-RFADCAxis-I")     
 }
+
+record(calc, "$(P){RFDFE:$(NO)}Freq-RFADCAxis-I") {
+    field(DESC, "Measured clock frequency (MHz)")
+    field(INPA,"$(P){RFDFE:$(NO)}Freq-RFADCAxis-IRAW")
+    field(CALC,"A/1e6")
+    field(PREC,"6")
+}
+
+
+
+
+
 
