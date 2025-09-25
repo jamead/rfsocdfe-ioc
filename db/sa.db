@@ -1,0 +1,38 @@
+########################################################
+#
+# RFSOC SA (10Hz) PSCDRV PVs
+#
+########################################################
+
+
+
+record(longin, "$(P){RFDFE:$(NO)}TS:NS-I") {
+    field(DESC, "EVR Timestamp nano second for SA")
+    field(DTYP, "PSC Reg")
+    field(INP , "@psc$(NO) 31 4")
+    field(SCAN,"I/O Intr")
+    field(EGU,  "ns")
+    field(TSE , "-2")
+    info("TimeFromBlock", "12")
+    info("TimeNSScale", "8")
+}
+
+record(longin, "$(P){RFDFE:$(NO)}TS-I") {
+    field(DESC, "EVR Timestamp second for SA")
+    field(DTYP, "PSC Reg")
+    field(INP , "@psc$(NO) 31 8")
+    field(SCAN,"I/O Intr")
+    field(EGU,  "sec")
+    field(TSE , "-2")
+    info("TimeFromBlock", "12")
+    info("TimeNSScale", "8")
+}
+
+record(waveform, "$(P){RFDFE:$(NO)}SA:TrigDate-I"){
+    field(DTYP,"Soft Channel")
+    field(DESC,"Date String")
+    field(NELM,"40")
+    field(FTVL,"CHAR")
+}
+
+

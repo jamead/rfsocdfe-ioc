@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-09-13 10:20:16 by mead-->
+<!--Saved on 2025-09-24 12:12:00 by mead-->
 <display version="2.0.0">
   <name>$(PriSys):$(PSC)</name>
   <width>1000</width>
@@ -138,7 +138,7 @@ $(pv_value)</tooltip>
   <widget type="group" version="3.0.0">
     <name>Temperatures</name>
     <x>336</x>
-    <y>284</y>
+    <y>208</y>
     <width>310</width>
     <height>263</height>
     <style>1</style>
@@ -515,7 +515,7 @@ $(pv_value)</tooltip>
   <widget type="group" version="3.0.0">
     <name>Power</name>
     <x>24</x>
-    <y>284</y>
+    <y>286</y>
     <width>310</width>
     <height>451</height>
     <style>1</style>
@@ -1335,9 +1335,9 @@ $(pv_value)</tooltip>
   <widget type="group" version="3.0.0">
     <name>Frequencies (MHz)</name>
     <x>336</x>
-    <y>549</y>
+    <y>475</y>
     <width>310</width>
-    <height>186</height>
+    <height>144</height>
     <style>1</style>
     <foreground_color>
       <color red="255" green="255" blue="255">
@@ -1371,7 +1371,7 @@ $(pv_value)</tooltip>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_206</name>
-      <text>PS</text>
+      <text>RFDAC Out</text>
       <x>49</x>
       <y>5</y>
       <width>96</width>
@@ -1532,7 +1532,7 @@ $(pv_value)</tooltip>
   <widget type="group" version="3.0.0">
     <name>General Readbacks</name>
     <x>24</x>
-    <y>42</y>
+    <y>41</y>
     <width>622</width>
     <height>60</height>
     <style>1</style>
@@ -1653,7 +1653,7 @@ $(pv_value)</tooltip>
   <widget type="group" version="3.0.0">
     <name>FreeRTOS Stats</name>
     <x>24</x>
-    <y>102</y>
+    <y>104</y>
     <width>310</width>
     <height>180</height>
     <style>1</style>
@@ -1871,18 +1871,120 @@ $(pv_value)</tooltip>
       </border_color>
     </widget>
   </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Action Button_1</name>
-    <actions>
-      <action type="open_display">
-        <file>rfsoc_adc.bob</file>
-        <target>window</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>ADC Plots</text>
-    <x>435</x>
-    <y>182</y>
-    <tooltip>$(actions)</tooltip>
+  <widget type="group" version="3.0.0">
+    <name>EVR</name>
+    <x>337</x>
+    <y>104</y>
+    <width>310</width>
+    <height>100</height>
+    <style>1</style>
+    <foreground_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="65" green="105" blue="225">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Update_370</name>
+      <pv_name>$(P){RFDFE:$(N)}TS:NS-I</pv_name>
+      <x>145</x>
+      <y>41</y>
+      <width>90</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <precision>0</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_260</name>
+      <text>Timestamp (ns)</text>
+      <x>22</x>
+      <y>41</y>
+      <width>109</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Update_372</name>
+      <pv_name>$(P){RFDFE:$(N)}TS-I</pv_name>
+      <x>145</x>
+      <y>16</y>
+      <width>90</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <precision>0</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_262</name>
+      <text>Timestamp (s)</text>
+      <x>38</x>
+      <y>16</y>
+      <width>92</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Plots</name>
+    <x>336</x>
+    <y>622</y>
+    <width>310</width>
+    <height>115</height>
+    <style>1</style>
+    <foreground_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="65" green="105" blue="225">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_1</name>
+      <actions>
+        <action type="open_display">
+          <file>rfsoc_adc.bob</file>
+          <target>window</target>
+          <description>Open Display</description>
+        </action>
+      </actions>
+      <text>ADC Plots</text>
+      <x>98</x>
+      <y>19</y>
+      <tooltip>$(actions)</tooltip>
+    </widget>
   </widget>
 </display>
