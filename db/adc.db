@@ -93,5 +93,16 @@ record(waveform,"$(P){RFDFE:$(NO)}ADC:H:Buff-Wfm") {
 }
 
 
+record(longout, "$(P){RFDFE:$(NO)}ADC:MinX") {
+    field(DESC, "X Axis Minimum for waveform display")
+    field(VAL, "0")        # default value
+    field(PINI, "YES")     # initialize at startup
+}
+
+record(longout, "$(P){RFDFE:$(NO)}ADC:MaxX") {
+    field(DESC, "X Axis Minimum for waveform display")
+    field(VAL, "10000")        # default value
+    field(PINI, "YES")     # initialize at startup
+}   
 
 

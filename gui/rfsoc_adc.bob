@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-09-13 10:25:41 by mead-->
+<!--Saved on 2026-06-22 08:00:08 by mead-->
 <display version="2.0.0">
   <name>$(PriSys):$(PSC)</name>
   <width>1000</width>
@@ -19,7 +19,7 @@
     </macros>
     <text>${P}</text>
     <x>834</x>
-    <y>16</y>
+    <y>28</y>
     <width>77</width>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -48,7 +48,7 @@ $(pv_value)</tooltip>
     </macros>
     <text>${N}</text>
     <x>915</x>
-    <y>16</y>
+    <y>28</y>
     <width>77</width>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -128,21 +128,33 @@ $(pv_value)</tooltip>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_116</name>
     <x>1032</x>
-    <y>707</y>
+    <y>719</y>
     <width>1</width>
     <height>1</height>
   </widget>
   <widget type="xyplot" version="3.0.0">
     <name>X/Y Plot_1</name>
     <x>36</x>
-    <y>42</y>
-    <width>570</width>
+    <y>54</y>
+    <width>625</width>
     <height>208</height>
     <title>ADC ChA</title>
     <title_font>
       <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
       </font>
     </title_font>
+    <show_legend>false</show_legend>
+    <scripts>
+      <script file="EmbeddedPy">
+        <text><![CDATA[# Embedded python script
+from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+#print 'Hello'
+widget.setPropertyValue('x_axis.minimum', PVUtil.getDouble(pvs[0])-1)
+widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
+        <pv_name>$(P){RFDFE:$(N)}ADC:MinX</pv_name>
+        <pv_name>$(P){RFDFE:$(N)}ADC:MaxX</pv_name>
+      </script>
+    </scripts>
     <x_axis>
       <title>X</title>
       <autoscale>true</autoscale>
@@ -207,14 +219,26 @@ $(pv_value)</tooltip>
   <widget type="xyplot" version="3.0.0">
     <name>X/Y Plot_3</name>
     <x>36</x>
-    <y>250</y>
-    <width>570</width>
+    <y>267</y>
+    <width>625</width>
     <height>208</height>
     <title>ADC ChB</title>
     <title_font>
       <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
       </font>
     </title_font>
+    <show_legend>false</show_legend>
+    <scripts>
+      <script file="EmbeddedPy">
+        <text><![CDATA[# Embedded python script
+from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+#print 'Hello'
+widget.setPropertyValue('x_axis.minimum', PVUtil.getDouble(pvs[0])-1)
+widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
+        <pv_name>$(P){RFDFE:$(N)}ADC:MinX</pv_name>
+        <pv_name>$(P){RFDFE:$(N)}ADC:MaxX</pv_name>
+      </script>
+    </scripts>
     <x_axis>
       <title>X</title>
       <autoscale>true</autoscale>
@@ -276,17 +300,111 @@ $(pv_value)</tooltip>
       </trace>
     </traces>
   </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_2</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(P){RFDFE:$(N)}TrigADC-SP</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <text>Manual Update</text>
+    <x>620</x>
+    <y>12</y>
+    <width>120</width>
+    <height>31</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>X Max</text>
+    <x>512</x>
+    <y>8</y>
+    <width>42</width>
+    <height>18</height>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Update_248</name>
+    <pv_name>$(P){RFDFE:$(N)}ADC:MaxX</pv_name>
+    <x>481</x>
+    <y>25</y>
+    <width>90</width>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>X Min</text>
+    <x>410</x>
+    <y>8</y>
+    <width>42</width>
+    <height>18</height>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Update_249</name>
+    <pv_name>$(P){RFDFE:$(N)}ADC:MinX</pv_name>
+    <x>379</x>
+    <y>25</y>
+    <width>90</width>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
   <widget type="xyplot" version="3.0.0">
     <name>X/Y Plot_4</name>
     <x>36</x>
-    <y>458</y>
-    <width>570</width>
+    <y>480</y>
+    <width>625</width>
     <height>208</height>
     <title>ADC ChC</title>
     <title_font>
       <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
       </font>
     </title_font>
+    <show_legend>false</show_legend>
+    <scripts>
+      <script file="EmbeddedPy">
+        <text><![CDATA[# Embedded python script
+from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+#print 'Hello'
+widget.setPropertyValue('x_axis.minimum', PVUtil.getDouble(pvs[0])-1)
+widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
+        <pv_name>$(P){RFDFE:$(N)}ADC:MinX</pv_name>
+        <pv_name>$(P){RFDFE:$(N)}ADC:MaxX</pv_name>
+      </script>
+    </scripts>
     <x_axis>
       <title>X</title>
       <autoscale>true</autoscale>
@@ -351,14 +469,26 @@ $(pv_value)</tooltip>
   <widget type="xyplot" version="3.0.0">
     <name>X/Y Plot_5</name>
     <x>36</x>
-    <y>666</y>
-    <width>570</width>
+    <y>693</y>
+    <width>625</width>
     <height>208</height>
     <title>ADC ChD</title>
     <title_font>
       <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
       </font>
     </title_font>
+    <show_legend>false</show_legend>
+    <scripts>
+      <script file="EmbeddedPy">
+        <text><![CDATA[# Embedded python script
+from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+#print 'Hello'
+widget.setPropertyValue('x_axis.minimum', PVUtil.getDouble(pvs[0])-1)
+widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
+        <pv_name>$(P){RFDFE:$(N)}ADC:MinX</pv_name>
+        <pv_name>$(P){RFDFE:$(N)}ADC:MaxX</pv_name>
+      </script>
+    </scripts>
     <x_axis>
       <title>X</title>
       <autoscale>true</autoscale>
@@ -421,16 +551,28 @@ $(pv_value)</tooltip>
     </traces>
   </widget>
   <widget type="xyplot" version="3.0.0">
-    <name>X/Y Plot_2</name>
-    <x>624</x>
-    <y>42</y>
-    <width>570</width>
+    <name>X/Y Plot_10</name>
+    <x>666</x>
+    <y>54</y>
+    <width>625</width>
     <height>208</height>
     <title>ADC ChE</title>
     <title_font>
       <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
       </font>
     </title_font>
+    <show_legend>false</show_legend>
+    <scripts>
+      <script file="EmbeddedPy">
+        <text><![CDATA[# Embedded python script
+from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+#print 'Hello'
+widget.setPropertyValue('x_axis.minimum', PVUtil.getDouble(pvs[0])-1)
+widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
+        <pv_name>$(P){RFDFE:$(N)}ADC:MinX</pv_name>
+        <pv_name>$(P){RFDFE:$(N)}ADC:MaxX</pv_name>
+      </script>
+    </scripts>
     <x_axis>
       <title>X</title>
       <autoscale>true</autoscale>
@@ -493,16 +635,28 @@ $(pv_value)</tooltip>
     </traces>
   </widget>
   <widget type="xyplot" version="3.0.0">
-    <name>X/Y Plot_6</name>
-    <x>624</x>
-    <y>250</y>
-    <width>570</width>
+    <name>X/Y Plot_11</name>
+    <x>666</x>
+    <y>267</y>
+    <width>625</width>
     <height>208</height>
     <title>ADC ChF</title>
     <title_font>
       <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
       </font>
     </title_font>
+    <show_legend>false</show_legend>
+    <scripts>
+      <script file="EmbeddedPy">
+        <text><![CDATA[# Embedded python script
+from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+#print 'Hello'
+widget.setPropertyValue('x_axis.minimum', PVUtil.getDouble(pvs[0])-1)
+widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
+        <pv_name>$(P){RFDFE:$(N)}ADC:MinX</pv_name>
+        <pv_name>$(P){RFDFE:$(N)}ADC:MaxX</pv_name>
+      </script>
+    </scripts>
     <x_axis>
       <title>X</title>
       <autoscale>true</autoscale>
@@ -565,16 +719,28 @@ $(pv_value)</tooltip>
     </traces>
   </widget>
   <widget type="xyplot" version="3.0.0">
-    <name>X/Y Plot_7</name>
-    <x>624</x>
-    <y>458</y>
-    <width>570</width>
+    <name>X/Y Plot_12</name>
+    <x>666</x>
+    <y>480</y>
+    <width>625</width>
     <height>208</height>
     <title>ADC ChG</title>
     <title_font>
       <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
       </font>
     </title_font>
+    <show_legend>false</show_legend>
+    <scripts>
+      <script file="EmbeddedPy">
+        <text><![CDATA[# Embedded python script
+from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+#print 'Hello'
+widget.setPropertyValue('x_axis.minimum', PVUtil.getDouble(pvs[0])-1)
+widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
+        <pv_name>$(P){RFDFE:$(N)}ADC:MinX</pv_name>
+        <pv_name>$(P){RFDFE:$(N)}ADC:MaxX</pv_name>
+      </script>
+    </scripts>
     <x_axis>
       <title>X</title>
       <autoscale>true</autoscale>
@@ -637,16 +803,28 @@ $(pv_value)</tooltip>
     </traces>
   </widget>
   <widget type="xyplot" version="3.0.0">
-    <name>X/Y Plot_8</name>
-    <x>624</x>
-    <y>666</y>
-    <width>570</width>
+    <name>X/Y Plot_13</name>
+    <x>666</x>
+    <y>693</y>
+    <width>625</width>
     <height>208</height>
     <title>ADC ChH</title>
     <title_font>
       <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
       </font>
     </title_font>
+    <show_legend>false</show_legend>
+    <scripts>
+      <script file="EmbeddedPy">
+        <text><![CDATA[# Embedded python script
+from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+#print 'Hello'
+widget.setPropertyValue('x_axis.minimum', PVUtil.getDouble(pvs[0])-1)
+widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
+        <pv_name>$(P){RFDFE:$(N)}ADC:MinX</pv_name>
+        <pv_name>$(P){RFDFE:$(N)}ADC:MaxX</pv_name>
+      </script>
+    </scripts>
     <x_axis>
       <title>X</title>
       <autoscale>true</autoscale>
@@ -707,20 +885,5 @@ $(pv_value)</tooltip>
         <visible>true</visible>
       </trace>
     </traces>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Action Button_2</name>
-    <actions>
-      <action type="write_pv">
-        <pv_name>$(P){RFDFE:$(N)}TrigADC-SP</pv_name>
-        <value>1</value>
-        <description>WritePV</description>
-      </action>
-    </actions>
-    <text>Update</text>
-    <x>547</x>
-    <y>5</y>
-    <width>120</width>
-    <height>31</height>
   </widget>
 </display>

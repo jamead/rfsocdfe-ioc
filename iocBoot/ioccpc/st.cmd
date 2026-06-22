@@ -8,7 +8,7 @@
 epicsEnvSet("IOCNAME", "lab")
 
 # PSC IP address
-epicsEnvSet("RFDFE_IP", "10.0.142.193"); 
+epicsEnvSet("RFDFE_IP", "10.0.142.102"); 
 
 
 cd "${TOP}"
