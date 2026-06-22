@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-06-22 08:00:08 by mead-->
+<!--Saved on 2026-06-22 09:08:10 by mead-->
 <display version="2.0.0">
   <name>$(PriSys):$(PSC)</name>
-  <width>1000</width>
+  <width>1400</width>
   <height>1000</height>
   <background_color>
     <color red="200" green="215" blue="255">
@@ -18,8 +18,8 @@
       <pv_name></pv_name>
     </macros>
     <text>${P}</text>
-    <x>834</x>
-    <y>28</y>
+    <x>1109</x>
+    <y>42</y>
     <width>77</width>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -47,8 +47,8 @@ $(pv_value)</tooltip>
       <pv_name></pv_name>
     </macros>
     <text>${N}</text>
-    <x>915</x>
-    <y>28</y>
+    <x>1190</x>
+    <y>42</y>
     <width>77</width>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -73,7 +73,8 @@ $(pv_value)</tooltip>
   <widget type="label" version="2.0.0">
     <name>Label_45</name>
     <text>Location</text>
-    <x>838</x>
+    <x>1113</x>
+    <y>12</y>
     <width>78</width>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -91,7 +92,8 @@ $(pv_value)</tooltip>
   <widget type="label" version="2.0.0">
     <name>Label_46</name>
     <text>Number</text>
-    <x>913</x>
+    <x>1188</x>
+    <y>12</y>
     <width>78</width>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -128,14 +130,14 @@ $(pv_value)</tooltip>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_116</name>
     <x>1032</x>
-    <y>719</y>
+    <y>747</y>
     <width>1</width>
     <height>1</height>
   </widget>
   <widget type="xyplot" version="3.0.0">
     <name>X/Y Plot_1</name>
     <x>36</x>
-    <y>54</y>
+    <y>82</y>
     <width>625</width>
     <height>208</height>
     <title>ADC ChA</title>
@@ -219,7 +221,7 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
   <widget type="xyplot" version="3.0.0">
     <name>X/Y Plot_3</name>
     <x>36</x>
-    <y>267</y>
+    <y>295</y>
     <width>625</width>
     <height>208</height>
     <title>ADC ChB</title>
@@ -309,18 +311,18 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
         <description>WritePV</description>
       </action>
     </actions>
-    <text>Manual Update</text>
-    <x>620</x>
-    <y>12</y>
-    <width>120</width>
-    <height>31</height>
+    <text>Soft Trigger</text>
+    <x>966</x>
+    <y>37</y>
+    <width>104</width>
+    <height>24</height>
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label</name>
     <text>X Max</text>
     <x>512</x>
-    <y>8</y>
+    <y>22</y>
     <width>42</width>
     <height>18</height>
   </widget>
@@ -328,7 +330,7 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
     <name>Text Update_248</name>
     <pv_name>$(P){RFDFE:$(N)}ADC:MaxX</pv_name>
     <x>481</x>
-    <y>25</y>
+    <y>39</y>
     <width>90</width>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -353,7 +355,7 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
     <name>Label_1</name>
     <text>X Min</text>
     <x>410</x>
-    <y>8</y>
+    <y>22</y>
     <width>42</width>
     <height>18</height>
   </widget>
@@ -361,7 +363,7 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
     <name>Text Update_249</name>
     <pv_name>$(P){RFDFE:$(N)}ADC:MinX</pv_name>
     <x>379</x>
-    <y>25</y>
+    <y>39</y>
     <width>90</width>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -385,7 +387,7 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
   <widget type="xyplot" version="3.0.0">
     <name>X/Y Plot_4</name>
     <x>36</x>
-    <y>480</y>
+    <y>508</y>
     <width>625</width>
     <height>208</height>
     <title>ADC ChC</title>
@@ -469,7 +471,7 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
   <widget type="xyplot" version="3.0.0">
     <name>X/Y Plot_5</name>
     <x>36</x>
-    <y>693</y>
+    <y>721</y>
     <width>625</width>
     <height>208</height>
     <title>ADC ChD</title>
@@ -553,7 +555,7 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
   <widget type="xyplot" version="3.0.0">
     <name>X/Y Plot_10</name>
     <x>666</x>
-    <y>54</y>
+    <y>82</y>
     <width>625</width>
     <height>208</height>
     <title>ADC ChE</title>
@@ -637,7 +639,7 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
   <widget type="xyplot" version="3.0.0">
     <name>X/Y Plot_11</name>
     <x>666</x>
-    <y>267</y>
+    <y>295</y>
     <width>625</width>
     <height>208</height>
     <title>ADC ChF</title>
@@ -721,7 +723,7 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
   <widget type="xyplot" version="3.0.0">
     <name>X/Y Plot_12</name>
     <x>666</x>
-    <y>480</y>
+    <y>508</y>
     <width>625</width>
     <height>208</height>
     <title>ADC ChG</title>
@@ -805,7 +807,7 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
   <widget type="xyplot" version="3.0.0">
     <name>X/Y Plot_13</name>
     <x>666</x>
-    <y>693</y>
+    <y>721</y>
     <width>625</width>
     <height>208</height>
     <title>ADC ChH</title>
@@ -885,5 +887,69 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
         <visible>true</visible>
       </trace>
     </traces>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>Choice Button_1</name>
+    <pv_name>$(P){BPM:$(NO)}Trig:Source-SP</pv_name>
+    <x>814</x>
+    <y>38</y>
+    <width>122</width>
+    <height>24</height>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <selected_color>
+      <color red="255" green="216" blue="0">
+      </color>
+    </selected_color>
+    <items>
+      <item>EVR</item>
+      <item>Soft</item>
+    </items>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>Trigger Source</text>
+    <x>802</x>
+    <y>16</y>
+    <width>132</width>
+    <height>18</height>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_3</name>
+    <text>Trigger Event</text>
+    <x>661</x>
+    <y>16</y>
+    <width>113</width>
+    <height>18</height>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Update_250</name>
+    <pv_name>$(P){RFDFE:$(N)}Trig:EventNum-SP</pv_name>
+    <x>668</x>
+    <y>39</y>
+    <width>90</width>
+    <height>24</height>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
   </widget>
 </display>
