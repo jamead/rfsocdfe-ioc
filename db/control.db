@@ -100,16 +100,16 @@ record(bo, "$(P){RFDFE:$(NO)}Trig:Soft-SP") {
 
 record(longout, "$(P){RFDFE:$(NO)}Trig:Source-SP") {
     field(DESC, "Trigger Source for ADC. 0=EVR, 1=Soft")
-    field(DTYP, "PSC Single U32")
+    field(DTYP, "PSC Single I32")
     field(OUT , "@psc$(NO) 1 4")
-    field(ZNAM,"Off")
-    field(ONAM,"On")
+    #field(ZNAM,"Off")
+    #field(ONAM,"On")
     field(FLNK, "$(P){RFDFE:$(NO)}GoRegSingleWrite0")
 }
 
 record(longout, "$(P){RFDFE:$(NO)}Trig:EventNum-SP") {
     field(DESC, "EVR Event Number for ADC trigger")
-    field(DTYP, "PSC Single U32")
+    field(DTYP, "PSC Single I32")
     field(OUT , "@psc$(NO) 1 8")
     field(VAL, "32")
     field(PINI, "YES")   

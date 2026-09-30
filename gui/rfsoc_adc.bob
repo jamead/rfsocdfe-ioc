@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-06-22 09:08:10 by mead-->
+<!--Saved on 2026-06-23 13:56:28 by mead-->
 <display version="2.0.0">
-  <name>$(PriSys):$(PSC)</name>
-  <width>1400</width>
-  <height>1000</height>
+  <name>rfSOC ADC Plots</name>
+  <width>1500</width>
+  <height>1100</height>
   <background_color>
     <color red="200" green="215" blue="255">
     </color>
@@ -129,8 +129,8 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_116</name>
-    <x>1032</x>
-    <y>747</y>
+    <x>1040</x>
+    <y>750</y>
     <width>1</width>
     <height>1</height>
   </widget>
@@ -138,8 +138,8 @@ $(pv_value)</tooltip>
     <name>X/Y Plot_1</name>
     <x>36</x>
     <y>82</y>
-    <width>625</width>
-    <height>208</height>
+    <width>700</width>
+    <height>245</height>
     <title>ADC ChA</title>
     <title_font>
       <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
@@ -150,7 +150,7 @@ $(pv_value)</tooltip>
       <script file="EmbeddedPy">
         <text><![CDATA[# Embedded python script
 from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
-#print 'Hello'
+print 'HelloA'
 widget.setPropertyValue('x_axis.minimum', PVUtil.getDouble(pvs[0])-1)
 widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
         <pv_name>$(P){RFDFE:$(N)}ADC:MinX</pv_name>
@@ -159,10 +159,10 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
     </scripts>
     <x_axis>
       <title>X</title>
-      <autoscale>true</autoscale>
+      <autoscale>false</autoscale>
       <log_scale>false</log_scale>
       <minimum>0.0</minimum>
-      <maximum>100.0</maximum>
+      <maximum>10.0</maximum>
       <show_grid>true</show_grid>
       <title_font>
         <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -176,14 +176,14 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
     </x_axis>
     <y_axes>
       <y_axis>
-        <title>Y</title>
+        <title>ADU</title>
         <autoscale>true</autoscale>
         <log_scale>false</log_scale>
         <minimum>0.0</minimum>
         <maximum>100.0</maximum>
         <show_grid>true</show_grid>
         <title_font>
-          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
           </font>
         </title_font>
         <scale_font>
@@ -200,7 +200,7 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
     </y_axes>
     <traces>
       <trace>
-        <name>$(traces[0].y_pv)</name>
+        <name></name>
         <x_pv></x_pv>
         <y_pv>$(P){RFDFE:$(N)}ADC:A:Buff-Wfm</y_pv>
         <err_pv></err_pv>
@@ -221,9 +221,9 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
   <widget type="xyplot" version="3.0.0">
     <name>X/Y Plot_3</name>
     <x>36</x>
-    <y>295</y>
-    <width>625</width>
-    <height>208</height>
+    <y>330</y>
+    <width>700</width>
+    <height>245</height>
     <title>ADC ChB</title>
     <title_font>
       <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
@@ -234,7 +234,7 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
       <script file="EmbeddedPy">
         <text><![CDATA[# Embedded python script
 from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
-#print 'Hello'
+print 'HelloB'
 widget.setPropertyValue('x_axis.minimum', PVUtil.getDouble(pvs[0])-1)
 widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
         <pv_name>$(P){RFDFE:$(N)}ADC:MinX</pv_name>
@@ -243,10 +243,10 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
     </scripts>
     <x_axis>
       <title>X</title>
-      <autoscale>true</autoscale>
+      <autoscale>false</autoscale>
       <log_scale>false</log_scale>
       <minimum>0.0</minimum>
-      <maximum>100.0</maximum>
+      <maximum>10.0</maximum>
       <show_grid>true</show_grid>
       <title_font>
         <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -260,14 +260,14 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
     </x_axis>
     <y_axes>
       <y_axis>
-        <title>Y</title>
+        <title>ADU</title>
         <autoscale>true</autoscale>
         <log_scale>false</log_scale>
         <minimum>0.0</minimum>
         <maximum>100.0</maximum>
         <show_grid>true</show_grid>
         <title_font>
-          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
           </font>
         </title_font>
         <scale_font>
@@ -284,7 +284,7 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
     </y_axes>
     <traces>
       <trace>
-        <name>$(traces[0].y_pv)</name>
+        <name></name>
         <x_pv></x_pv>
         <y_pv>$(P){RFDFE:$(N)}ADC:B:Buff-Wfm</y_pv>
         <err_pv></err_pv>
@@ -306,7 +306,7 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
     <name>Action Button_2</name>
     <actions>
       <action type="write_pv">
-        <pv_name>$(P){RFDFE:$(N)}TrigADC-SP</pv_name>
+        <pv_name>$(P){RFDFE:$(N)}Trig:Soft-SP</pv_name>
         <value>1</value>
         <description>WritePV</description>
       </action>
@@ -387,9 +387,9 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
   <widget type="xyplot" version="3.0.0">
     <name>X/Y Plot_4</name>
     <x>36</x>
-    <y>508</y>
-    <width>625</width>
-    <height>208</height>
+    <y>580</y>
+    <width>700</width>
+    <height>245</height>
     <title>ADC ChC</title>
     <title_font>
       <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
@@ -409,10 +409,10 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
     </scripts>
     <x_axis>
       <title>X</title>
-      <autoscale>true</autoscale>
+      <autoscale>false</autoscale>
       <log_scale>false</log_scale>
       <minimum>0.0</minimum>
-      <maximum>100.0</maximum>
+      <maximum>10.0</maximum>
       <show_grid>true</show_grid>
       <title_font>
         <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -426,14 +426,14 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
     </x_axis>
     <y_axes>
       <y_axis>
-        <title>Y</title>
+        <title>ADU</title>
         <autoscale>true</autoscale>
         <log_scale>false</log_scale>
         <minimum>0.0</minimum>
         <maximum>100.0</maximum>
         <show_grid>true</show_grid>
         <title_font>
-          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
           </font>
         </title_font>
         <scale_font>
@@ -450,7 +450,7 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
     </y_axes>
     <traces>
       <trace>
-        <name>$(traces[0].y_pv)</name>
+        <name></name>
         <x_pv></x_pv>
         <y_pv>$(P){RFDFE:$(N)}ADC:C:Buff-Wfm</y_pv>
         <err_pv></err_pv>
@@ -471,9 +471,9 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
   <widget type="xyplot" version="3.0.0">
     <name>X/Y Plot_5</name>
     <x>36</x>
-    <y>721</y>
-    <width>625</width>
-    <height>208</height>
+    <y>830</y>
+    <width>700</width>
+    <height>245</height>
     <title>ADC ChD</title>
     <title_font>
       <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
@@ -493,10 +493,10 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
     </scripts>
     <x_axis>
       <title>X</title>
-      <autoscale>true</autoscale>
+      <autoscale>false</autoscale>
       <log_scale>false</log_scale>
       <minimum>0.0</minimum>
-      <maximum>100.0</maximum>
+      <maximum>10.0</maximum>
       <show_grid>true</show_grid>
       <title_font>
         <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -510,14 +510,14 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
     </x_axis>
     <y_axes>
       <y_axis>
-        <title>Y</title>
+        <title>ADU</title>
         <autoscale>true</autoscale>
         <log_scale>false</log_scale>
         <minimum>0.0</minimum>
         <maximum>100.0</maximum>
         <show_grid>true</show_grid>
         <title_font>
-          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
           </font>
         </title_font>
         <scale_font>
@@ -534,7 +534,7 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
     </y_axes>
     <traces>
       <trace>
-        <name>$(traces[0].y_pv)</name>
+        <name></name>
         <x_pv></x_pv>
         <y_pv>$(P){RFDFE:$(N)}ADC:D:Buff-Wfm</y_pv>
         <err_pv></err_pv>
@@ -554,10 +554,10 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
   </widget>
   <widget type="xyplot" version="3.0.0">
     <name>X/Y Plot_10</name>
-    <x>666</x>
+    <x>745</x>
     <y>82</y>
-    <width>625</width>
-    <height>208</height>
+    <width>700</width>
+    <height>245</height>
     <title>ADC ChE</title>
     <title_font>
       <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
@@ -577,10 +577,10 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
     </scripts>
     <x_axis>
       <title>X</title>
-      <autoscale>true</autoscale>
+      <autoscale>false</autoscale>
       <log_scale>false</log_scale>
       <minimum>0.0</minimum>
-      <maximum>100.0</maximum>
+      <maximum>10.0</maximum>
       <show_grid>true</show_grid>
       <title_font>
         <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -594,14 +594,14 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
     </x_axis>
     <y_axes>
       <y_axis>
-        <title>Y</title>
+        <title>ADU</title>
         <autoscale>true</autoscale>
         <log_scale>false</log_scale>
         <minimum>0.0</minimum>
         <maximum>100.0</maximum>
         <show_grid>true</show_grid>
         <title_font>
-          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
           </font>
         </title_font>
         <scale_font>
@@ -618,7 +618,7 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
     </y_axes>
     <traces>
       <trace>
-        <name>$(traces[0].y_pv)</name>
+        <name></name>
         <x_pv></x_pv>
         <y_pv>$(P){RFDFE:$(N)}ADC:E:Buff-Wfm</y_pv>
         <err_pv></err_pv>
@@ -638,10 +638,10 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
   </widget>
   <widget type="xyplot" version="3.0.0">
     <name>X/Y Plot_11</name>
-    <x>666</x>
-    <y>295</y>
-    <width>625</width>
-    <height>208</height>
+    <x>745</x>
+    <y>330</y>
+    <width>700</width>
+    <height>245</height>
     <title>ADC ChF</title>
     <title_font>
       <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
@@ -661,10 +661,10 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
     </scripts>
     <x_axis>
       <title>X</title>
-      <autoscale>true</autoscale>
+      <autoscale>false</autoscale>
       <log_scale>false</log_scale>
       <minimum>0.0</minimum>
-      <maximum>100.0</maximum>
+      <maximum>10.0</maximum>
       <show_grid>true</show_grid>
       <title_font>
         <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -678,14 +678,14 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
     </x_axis>
     <y_axes>
       <y_axis>
-        <title>Y</title>
+        <title>ADU</title>
         <autoscale>true</autoscale>
         <log_scale>false</log_scale>
         <minimum>0.0</minimum>
         <maximum>100.0</maximum>
         <show_grid>true</show_grid>
         <title_font>
-          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
           </font>
         </title_font>
         <scale_font>
@@ -702,7 +702,7 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
     </y_axes>
     <traces>
       <trace>
-        <name>$(traces[0].y_pv)</name>
+        <name></name>
         <x_pv></x_pv>
         <y_pv>$(P){RFDFE:$(N)}ADC:F:Buff-Wfm</y_pv>
         <err_pv></err_pv>
@@ -722,10 +722,10 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
   </widget>
   <widget type="xyplot" version="3.0.0">
     <name>X/Y Plot_12</name>
-    <x>666</x>
-    <y>508</y>
-    <width>625</width>
-    <height>208</height>
+    <x>745</x>
+    <y>580</y>
+    <width>700</width>
+    <height>245</height>
     <title>ADC ChG</title>
     <title_font>
       <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
@@ -745,10 +745,10 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
     </scripts>
     <x_axis>
       <title>X</title>
-      <autoscale>true</autoscale>
+      <autoscale>false</autoscale>
       <log_scale>false</log_scale>
       <minimum>0.0</minimum>
-      <maximum>100.0</maximum>
+      <maximum>10.0</maximum>
       <show_grid>true</show_grid>
       <title_font>
         <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -762,14 +762,14 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
     </x_axis>
     <y_axes>
       <y_axis>
-        <title>Y</title>
+        <title>ADU</title>
         <autoscale>true</autoscale>
         <log_scale>false</log_scale>
         <minimum>0.0</minimum>
         <maximum>100.0</maximum>
         <show_grid>true</show_grid>
         <title_font>
-          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
           </font>
         </title_font>
         <scale_font>
@@ -786,7 +786,7 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
     </y_axes>
     <traces>
       <trace>
-        <name>$(traces[0].y_pv)</name>
+        <name></name>
         <x_pv></x_pv>
         <y_pv>$(P){RFDFE:$(N)}ADC:G:Buff-Wfm</y_pv>
         <err_pv></err_pv>
@@ -806,10 +806,10 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
   </widget>
   <widget type="xyplot" version="3.0.0">
     <name>X/Y Plot_13</name>
-    <x>666</x>
-    <y>721</y>
-    <width>625</width>
-    <height>208</height>
+    <x>745</x>
+    <y>830</y>
+    <width>700</width>
+    <height>245</height>
     <title>ADC ChH</title>
     <title_font>
       <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
@@ -829,10 +829,10 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
     </scripts>
     <x_axis>
       <title>X</title>
-      <autoscale>true</autoscale>
+      <autoscale>false</autoscale>
       <log_scale>false</log_scale>
       <minimum>0.0</minimum>
-      <maximum>100.0</maximum>
+      <maximum>10.0</maximum>
       <show_grid>true</show_grid>
       <title_font>
         <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -846,14 +846,14 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
     </x_axis>
     <y_axes>
       <y_axis>
-        <title>Y</title>
+        <title>ADU</title>
         <autoscale>true</autoscale>
         <log_scale>false</log_scale>
         <minimum>0.0</minimum>
         <maximum>100.0</maximum>
         <show_grid>true</show_grid>
         <title_font>
-          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
           </font>
         </title_font>
         <scale_font>
@@ -870,7 +870,7 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
     </y_axes>
     <traces>
       <trace>
-        <name>$(traces[0].y_pv)</name>
+        <name></name>
         <x_pv></x_pv>
         <y_pv>$(P){RFDFE:$(N)}ADC:H:Buff-Wfm</y_pv>
         <err_pv></err_pv>
@@ -890,7 +890,7 @@ widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[1])-1)]]></text>
   </widget>
   <widget type="choice" version="2.0.0">
     <name>Choice Button_1</name>
-    <pv_name>$(P){BPM:$(NO)}Trig:Source-SP</pv_name>
+    <pv_name>$(P){RFDFE:$(N)}Trig:Source-SP</pv_name>
     <x>814</x>
     <y>38</y>
     <width>122</width>
