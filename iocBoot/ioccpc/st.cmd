@@ -8,7 +8,7 @@
 epicsEnvSet("IOCNAME", "lab")
 
 # PSC IP address
-epicsEnvSet("RFDFE_IP", "10.0.142.193"); 
+epicsEnvSet("RFDFE_IP", "10.0.142.165"); 
 
 
 cd "${TOP}"
@@ -25,7 +25,7 @@ dbLoadRecords("db/sa.db","P=$(IOCNAME), NO=1")
 dbLoadRecords("db/lstats.db","P=$(IOCNAME), NO=1")
 dbLoadRecords("db/rfstats.db","P=$(IOCNAME), NO=1")
 dbLoadRecords("db/brdstats.db","P=$(IOCNAME), NO=1")
-dbLoadRecords("db/adc.db","P=$(IOCNAME), NO=1, ADC_LEN=96000")
+dbLoadRecords("db/adc.db","P=$(IOCNAME), NO=1, ADC_LEN=96000, DMA_LEN=240000")
 #dbLoadRecords("db/fpgabin.db","P=$(IOCNAME), NO=1")
 #dbLoadRecords("db/sfpdb_control.db","P=$(IOCNAME), NO=1")
 

@@ -116,9 +116,24 @@ record(longout, "$(P){RFDFE:$(NO)}Trig:EventNum-SP") {
     field(FLNK, "$(P){RFDFE:$(NO)}GoRegSingleWrite0")
 }
 
+record(longout, "$(P){RFDFE:$(NO)}Trig:FIFO-delay-SP") {
+    field(DESC, "TbT to FIFO capture delay")
+    field(DTYP, "PSC Single I32")
+    field(OUT , "@psc$(NO) 1 12")
+    field(VAL, "32")
+    field(PINI, "YES")   
+    field(FLNK, "$(P){RFDFE:$(NO)}GoRegSingleWrite0")
+}
 
 
-
+record(longout, "$(P){RFDFE:$(NO)}Trig:DMA-delay-SP") {
+    field(DESC, "TbT to DMA capture delay")
+    field(DTYP, "PSC Single I32")
+    field(OUT , "@psc$(NO) 1 16")
+    field(VAL, "32")
+    field(PINI, "YES")   
+    field(FLNK, "$(P){RFDFE:$(NO)}GoRegSingleWrite0")
+}    
 
 
  

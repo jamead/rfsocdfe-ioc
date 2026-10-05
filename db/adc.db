@@ -93,6 +93,51 @@ record(waveform,"$(P){RFDFE:$(NO)}ADC:H:Buff-Wfm") {
 }
 
 
+
+record(waveform,"$(P){RFDFE:$(NO)}ADC:A:DMA-Wfm") {
+    field(DESC, "ADC Single Bunch slice in Turn")
+    field(DTYP, "PSC Block I16 In")
+    field(INP , "@psc$(NO) 70 0 ")
+    field(SCAN, "I/O Intr")
+    field(FTVL, "DOUBLE")
+    field(HOPR, "32768")
+    field(LOPR, "-32767")
+    field(NELM,"$(DMA_LEN)")
+}
+
+record(waveform,"$(P){RFDFE:$(NO)}ADC:B:DMA-Wfm") {
+    field(DESC, "ADC Single Bunch slice in Turn")
+    field(DTYP, "PSC Block I16 In")
+    field(INP , "@psc$(NO) 71 0 ")
+    field(SCAN, "I/O Intr")
+    field(FTVL, "DOUBLE")
+    field(HOPR, "32768")
+    field(LOPR, "-32767")
+    field(NELM,"$(DMA_LEN)")
+}
+
+record(waveform,"$(P){RFDFE:$(NO)}ADC:C:DMA-Wfm") {
+    field(DESC, "ADC Single Bunch slice in Turn")
+    field(DTYP, "PSC Block I16 In")
+    field(INP , "@psc$(NO) 72 0 ")
+    field(SCAN, "I/O Intr")
+    field(FTVL, "DOUBLE")
+    field(HOPR, "32768")
+    field(LOPR, "-32767")
+    field(NELM,"$(DMA_LEN)")
+}
+
+record(waveform,"$(P){RFDFE:$(NO)}ADC:D:DMA-Wfm") {
+    field(DESC, "ADC Single Bunch slice in Turn")
+    field(DTYP, "PSC Block I16 In")
+    field(INP , "@psc$(NO) 73 0 ")
+    field(SCAN, "I/O Intr")
+    field(FTVL, "DOUBLE")
+    field(HOPR, "32768")
+    field(LOPR, "-32767")
+    field(NELM,"$(DMA_LEN)")
+}
+
 record(longout, "$(P){RFDFE:$(NO)}ADC:MinX") {
     field(DESC, "X Axis Minimum for waveform display")
     field(VAL, "0")        # default value
